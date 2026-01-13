@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/navbar';
+import Hero from '../components/hero';
+import Services from '../components/services';
+import CaseStudies from '../components/case-studies';
+import Testimonials from '../components/testimonials';
+import Footer from '../components/footer';
+---
+
+<Layout title="Sarana Group | Digital Transformation Agency">
+  <Navbar client:load />
+  <main>
+    <Hero client:load />
+    <Services />
+    <CaseStudies />
+    <Testimonials />
+  </main>
+  <Footer />
+</Layout>
