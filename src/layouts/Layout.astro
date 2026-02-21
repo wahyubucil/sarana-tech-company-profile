@@ -1,34 +1,43 @@
 ---
-import "../styles/global.css";
+import Footer from '~/components/footer.astro';
+import Header from '~/components/header.astro';
+import '~/styles/global.css';
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { 
-  title, 
-  description = "Sarana Group - Empowering Your Digital Transformation. We are a premier digital agency and startup incubator based in Bali." 
+const {
+  title,
+  description = 'Sarana Group - Empowering Your Digital Transformation. We are a premier digital agency and startup incubator based in Bali.',
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="generator" content={Astro.generator}>
+    <meta name="description" content={description}>
+
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+
     <title>{title}</title>
   </head>
-  <body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+  <body
+    class="bg-slate-50 text-slate-900 flex flex-col min-h-screen font-['Plus_Jakarta_Sans',sans-serif]"
+  >
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
