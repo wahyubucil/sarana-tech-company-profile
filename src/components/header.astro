@@ -1,12 +1,13 @@
 ---
 import imgLogoDark from '~/assets/images/logo-dark.png';
+import { Navigation } from '~/components/navigation.tsx';
 ---
 
 <header
   class="h-[86px] relative shrink-0 w-full max-w-[1170px] mx-auto px-4 md:px-0"
 >
   <div class="absolute h-[34px] left-4 md:left-[-0.5px] top-[25.5px] w-[127px]">
-    <a href="/"
+    <a href="/" class="relative z-30 block size-full"
       ><img
         alt="SaranaTech"
         class="absolute block max-w-none size-full"
@@ -14,6 +15,8 @@ import imgLogoDark from '~/assets/images/logo-dark.png';
       ></a
     >
   </div>
+
+  <!-- Desktop Navigation -->
   <nav
     class="-translate-y-1/2 hidden md:flex absolute content-stretch font-semibold gap-[35px] items-start leading-none py-[12px] right-[-0.5px] text-[12px] top-[calc(50%+0.5px)] uppercase whitespace-nowrap"
   >
@@ -41,4 +44,7 @@ import imgLogoDark from '~/assets/images/logo-dark.png';
       <a href="/contact" class="leading-[20px]">contact us</a>
     </div>
   </nav>
+
+  <!-- Mobile Navigation (Hamburger) -->
+  <Navigation client:load />
 </header>

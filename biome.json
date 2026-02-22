@@ -22,6 +22,14 @@
       "correctness": {
         "noUnusedImports": "off",
         "noUnusedVariables": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "warn",
+          "options": {
+            "functions": ["cn", "clsx", "twMerge"]
+          }
+        }
       }
     }
   },
