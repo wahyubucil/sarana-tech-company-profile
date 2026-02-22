@@ -21,9 +21,10 @@ This project strictly uses **Bun**. Do NOT use `npm`, `yarn`, or `pnpm` for any 
 *   **Preview Build:** `bun run preview`
 
 ### Linting & Type Checking
-This project enforces strict type checking. Before finalizing any task, run these commands to ensure no typing errors were introduced:
+This project enforces strict type checking and linting. Before finalizing any task, run these commands to ensure no typing errors were introduced and code is formatted:
 *   **TypeScript Check:** `bunx tsc --noEmit`
 *   **Astro Type Check:** `bunx astro check`
+*   **Linting & Formatting (Biome):** `bunx @biomejs/biome check --write` (Use `--unsafe` for Tailwind class sorting if prompted)
 
 ### Testing Commands
 *Currently, there is no testing framework initialized in `package.json`.* 
@@ -45,6 +46,7 @@ If you are tasked with writing or running tests, follow these guidelines:
 *   `src/layouts/`: Astro layout wrappers.
 *   `src/components/`: Shared UI elements. Both `.astro` and `.tsx` live here.
 *   `src/assets/`: Static assets optimized by Astro.
+*   `src/lib/`: Utility functions and helpers (e.g., `utils.ts` for `cn`).
 *   `src/data/`: Static JSON data or constants.
 
 ### Naming Conventions
@@ -73,8 +75,9 @@ If you are tasked with writing or running tests, follow these guidelines:
 
 ### Styling & Formatting
 *   **Tailwind CSS (v4):** All styling must be done using Tailwind CSS utility classes.
+*   **Dynamic Classes:** Use the `cn` utility from `~/lib/utils` (combines `clsx` and `tailwind-merge`) instead of raw template literals for conditional or dynamic Tailwind classes (e.g., `className={cn('base-class', isActive && 'active-class')}`).
 *   **Inline Classes:** Prefer inline utility classes over creating custom CSS files with `@apply`. If a component becomes too class-heavy, extract it into a smaller React/Astro component.
-*   **Class Grouping:** Order Tailwind classes logically (Layout > Spacing > Typography > Colors > Interactivity/Effects).
+*   **Class Grouping & Sorting:** Tailwind classes are automatically sorted using Biome (`nursery/useSortedClasses`). Run `bunx @biomejs/biome check --write --unsafe` to sort them.
 *   **Immutability:** Use `const` over `let`. Do not mutate objects or arrays; return new instances (e.g., `[...arr, newItem]`).
 
 ### Error Handling
