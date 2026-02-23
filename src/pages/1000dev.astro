@@ -1,22 +1,14 @@
 ---
 import { Image } from 'astro:assets';
-import banner2Img7 from '~/assets/images/1000dev/banner2-img7.jpg';
-import banner2Img12 from '~/assets/images/1000dev/banner2-img12.jpg';
-import banner2Img13 from '~/assets/images/1000dev/banner2-img13.jpg';
-import banner2Img14 from '~/assets/images/1000dev/banner2-img14.jpg';
-import banner2Img17 from '~/assets/images/1000dev/banner2-img17.jpg';
-import fundamental from '~/assets/images/1000dev/fundamental.png';
-import gdgBali from '~/assets/images/1000dev/gdg-bali.png';
-import heroBg from '~/assets/images/1000dev/hero-bg.jpg';
-import heroText from '~/assets/images/1000dev/hero-text.png';
-import logoText from '~/assets/images/1000dev/logo-text.png';
-import logoTriangle from '~/assets/images/1000dev/logo-triangle.png';
-import logo2Text from '~/assets/images/1000dev/logo2-text.png';
-import logo2Triangle from '~/assets/images/1000dev/logo2-triangle.png';
-import primakara from '~/assets/images/1000dev/primakara.png';
-import unbi from '~/assets/images/1000dev/unbi.png';
-import uxdIsland from '~/assets/images/1000dev/uxd-island.png';
-import webfeeling from '~/assets/images/1000dev/webfeeling.png';
+import bannerTop from '~/assets/images/1000dev/1000dev-detail.png';
+import bannerBottom from '~/assets/images/1000dev/1000dev-detail-2.png';
+import fundamental from '~/assets/images/1000dev/1000dev-fundamental.svg';
+import gdgBali from '~/assets/images/1000dev/1000dev-gdgbali.png';
+import devLogo from '~/assets/images/1000dev/1000dev-logo.svg';
+import primakara from '~/assets/images/1000dev/1000dev-primakara.png';
+import unbi from '~/assets/images/1000dev/1000dev-unbi.png';
+import uxdIsland from '~/assets/images/1000dev/1000dev-uxd-island.png';
+import webfeeling from '~/assets/images/1000dev/1000dev-webfeeling.png';
 import Layout from '~/layouts/Layout.astro';
 ---
 
@@ -27,7 +19,7 @@ import Layout from '~/layouts/Layout.astro';
       class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 py-10 md:py-[60px]"
     >
       <h1
-        class="font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] tracking-[1px]  max-w-[990px] capitalize"
+        class="font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] tracking-[1px] max-w-[990px] capitalize text-[#101010]"
       >
         #1000Dev: Empowering Bali's Young Talented Developers Through Impactful
         Campaign
@@ -41,22 +33,11 @@ import Layout from '~/layouts/Layout.astro';
       <div
         class="h-[280px] md:h-[380px] overflow-hidden relative w-full bg-[#343434]"
       >
-        <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+        <div class="absolute inset-0 pointer-events-none">
           <Image
-            src={heroBg}
-            alt=""
+            src={bannerTop}
+            alt="1000Dev Banner"
             class="absolute h-full w-full object-cover object-center"
-          />
-          <div class="absolute bg-black/30 inset-0"></div>
-        </div>
-
-        <div
-          class="absolute inset-0 pointer-events-none overflow-hidden mix-blend-overlay opacity-50"
-        >
-          <Image
-            src={heroText}
-            alt=""
-            class="absolute h-full w-full object-cover object-center scale-110"
           />
         </div>
 
@@ -64,17 +45,12 @@ import Layout from '~/layouts/Layout.astro';
           class="absolute flex flex-col md:flex-row items-center justify-center inset-0 z-10 p-6 md:p-0"
         >
           <div
-            class="flex items-center gap-4 md:absolute md:left-[80px] md:top-[146px]"
+            class="flex items-center md:absolute md:left-[80px] md:top-[146px]"
           >
             <Image
-              src={logoTriangle}
-              alt="Triangle"
-              class="w-[48px] md:w-[68px] object-contain"
-            />
-            <Image
-              src={logoText}
+              src={devLogo}
               alt="Bali Movement #1000Devs"
-              class="w-[160px] md:w-[226px] object-contain"
+              class="w-[200px] md:w-[294px] object-contain"
             />
           </div>
         </div>
@@ -88,12 +64,12 @@ import Layout from '~/layouts/Layout.astro';
       <!-- About -->
       <div class="flex flex-col gap-[20px] items-start w-full">
         <h2
-          class="font-bold text-[20px] leading-[28.6px] tracking-[1px]  capitalize"
+          class="font-bold text-[20px] leading-[28.6px] tracking-[1px] capitalize text-[#101010]"
         >
           About #1000Dev
         </h2>
         <div
-          class="font-normal text-[15px] leading-[28px] text-[#767676] w-full md:max-w-[640px] flex flex-col gap-4"
+          class="font-normal text-[15px] leading-[28px] text-[#989898] w-full md:max-w-[640px] flex flex-col gap-4"
         >
           <p>
             SaranaTech, in collaboration with industry leaders, developer
@@ -125,12 +101,12 @@ import Layout from '~/layouts/Layout.astro';
       <!-- Engaging -->
       <div class="flex flex-col gap-[20px] items-start w-full">
         <h2
-          class="font-bold text-[20px] leading-[28.6px] tracking-[1px]  capitalize"
+          class="font-bold text-[20px] leading-[28.6px] tracking-[1px] capitalize text-[#101010]"
         >
           Engaging The Developer Community
         </h2>
         <p
-          class="font-normal text-[15px] leading-[28px] text-[#767676] w-full md:max-w-[640px]"
+          class="font-normal text-[15px] leading-[28px] text-[#989898] w-full md:max-w-[640px]"
         >
           The #1000Dev campaign has garnered extensive support from the tech
           community in Bali, including the active involvement of the Google
@@ -143,12 +119,12 @@ import Layout from '~/layouts/Layout.astro';
       <!-- Support -->
       <div class="flex flex-col gap-[20px] items-start w-full">
         <h2
-          class="font-bold text-[20px] leading-[28.6px] tracking-[1px]  capitalize"
+          class="font-bold text-[20px] leading-[28.6px] tracking-[1px] capitalize text-[#101010]"
         >
           Support From Educational Institutions
         </h2>
         <p
-          class="font-normal text-[15px] leading-[28px] text-[#767676] w-full md:max-w-[640px]"
+          class="font-normal text-[15px] leading-[28px] text-[#989898] w-full md:max-w-[640px]"
         >
           Primakara University and Bali International University (UNBI) are
           among the educational institutions that have rallied behind the
@@ -162,15 +138,17 @@ import Layout from '~/layouts/Layout.astro';
       <!-- Objectives -->
       <div class="flex flex-col gap-[20px] items-start w-full">
         <h2
-          class="font-bold text-[20px] leading-[28.6px] tracking-[1px]  capitalize"
+          class="font-bold text-[20px] leading-[28.6px] tracking-[1px] capitalize text-[#101010]"
         >
           #1000Dev Key Objectives:
         </h2>
         <ol
-          class="font-normal text-[15px] leading-[28px] text-[#767676] w-full md:max-w-[640px] list-decimal pl-5 space-y-4"
+          class="font-normal text-[15px] leading-[28px] text-[#989898] w-full md:max-w-[640px] list-decimal pl-5 space-y-4"
         >
           <li>
-            <span class=" font-semibold">Workshops and Training Sessions</span>
+            <span class="font-semibold text-[#101010]"
+              >Workshops and Training Sessions</span
+            >
             <br>
             SaranaTech organizes hands-on workshops and training sessions
             conducted by experienced industry professionals. These sessions
@@ -178,7 +156,7 @@ import Layout from '~/layouts/Layout.astro';
             development methodologies, and emerging technologies.
           </li>
           <li>
-            <span class=" font-semibold">Bootcamp Program</span>
+            <span class="font-semibold text-[#101010]">Bootcamp Program</span>
             <br>
             #1000Dev provides participants with access to a network of mentors
             who offer guidance, support, and industry insights. Mentors play a
@@ -187,7 +165,7 @@ import Layout from '~/layouts/Layout.astro';
             potential.
           </li>
           <li>
-            <span class=" font-semibold">Networking Events</span>
+            <span class="font-semibold text-[#101010]">Networking Events</span>
             <br>
             SaranaTech organizes networking events that bring together industry
             professionals, entrepreneurs, and developers. These events offer
@@ -195,14 +173,16 @@ import Layout from '~/layouts/Layout.astro';
             career advancements.
           </li>
           <li>
-            <span class=" font-semibold">Provision of work tools</span>
+            <span class="font-semibold text-[#101010]"
+              >Provision of work tools</span
+            >
             <br>
             We provide work tools in the form of laptops / PCs for young talents
             with good coding talent but limited funds to get qualified work
             tools.
           </li>
           <li>
-            <span class=" font-semibold"
+            <span class="font-semibold text-[#101010]"
               >Job Placement and Internship Opportunities</span
             >
             <br>
@@ -216,50 +196,15 @@ import Layout from '~/layouts/Layout.astro';
 
       <!-- Secondary Banner -->
       <div
-        class="h-[380px] overflow-hidden relative w-full bg-[#343434] mt-6 md:mt-10 group"
+        class="h-[380px] overflow-hidden relative w-full bg-[#343434] mt-6 md:mt-10"
       >
-        <!-- Background Collage Desktop (Hidden on Mobile for simpler view) -->
-        <div
-          class="hidden md:block absolute inset-0 pointer-events-none opacity-50 group-hover:opacity-60 transition-opacity duration-500"
-        >
+        <div class="absolute inset-0 pointer-events-none">
           <Image
-            src={banner2Img17}
-            alt=""
-            class="absolute h-[648px] w-[364px] object-cover left-0 top-1/2 -translate-y-1/2"
-          />
-          <Image
-            src={banner2Img12}
-            alt=""
-            class="absolute h-[273px] w-[273px] object-cover left-1/2 top-0"
-          />
-          <Image
-            src={banner2Img13}
-            alt=""
-            class="absolute h-[306px] w-[443px] object-cover right-0 bottom-[-50px]"
-          />
-          <Image
-            src={banner2Img7}
-            alt=""
-            class="absolute h-[272px] w-[362px] object-cover left-[40%] bottom-[-69px]"
-          />
-          <Image
-            src={banner2Img14}
-            alt=""
-            class="absolute h-[213px] w-[334px] object-cover left-[30%] bottom-[50px]"
+            src={bannerBottom}
+            alt="1000Dev Secondary Banner"
+            class="absolute h-full w-full object-cover object-center"
           />
         </div>
-        <!-- Mobile Background -->
-        <div class="md:hidden absolute inset-0 pointer-events-none opacity-40">
-          <Image
-            src={banner2Img17}
-            alt=""
-            class="absolute h-full w-full object-cover"
-          />
-        </div>
-
-        <div
-          class="absolute inset-0 bg-linear-to-r from-black/80 to-black/20 md:bg-[linear-gradient(108deg,rgba(26,26,26,0.62)_17%,#000_92%)] pointer-events-none"
-        ></div>
 
         <div
           class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 gap-8"
@@ -272,16 +217,11 @@ import Layout from '~/layouts/Layout.astro';
             >
             to become World-class developers
           </h3>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center">
             <Image
-              src={logo2Triangle}
-              alt="Triangle"
-              class="w-[34px] object-contain"
-            />
-            <Image
-              src={logo2Text}
+              src={devLogo}
               alt="Bali Movement #1000Devs"
-              class="w-[113px] object-contain"
+              class="w-[120px] md:w-[147px] object-contain"
             />
           </div>
         </div>
@@ -296,7 +236,7 @@ import Layout from '~/layouts/Layout.astro';
         class="w-full max-w-[1140px] mx-auto flex flex-col items-center gap-10 md:gap-[70px]"
       >
         <h2
-          class="font-bold text-[24px] md:text-[26px] leading-[28.6px] tracking-[1px]  uppercase text-center"
+          class="font-bold text-[24px] md:text-[26px] leading-[28.6px] tracking-[1px] uppercase text-center text-[#101010]"
         >
           OUR PARTNERS
         </h2>
@@ -315,7 +255,7 @@ import Layout from '~/layouts/Layout.astro';
           </div>
           <!-- Partner 2 -->
           <div
-            class="border-b border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex flex-col items-center justify-center p-6 gap-4"
+            class="border-b md:border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex flex-col items-center justify-center p-6 gap-4"
           >
             <Image
               src={webfeeling}
@@ -335,7 +275,7 @@ import Layout from '~/layouts/Layout.astro';
           </div>
           <!-- Partner 4 -->
           <div
-            class="border-b md:border-b-0 border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+            class="border-b md:border-b-0 md:border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
           >
             <Image
               src={fundamental}
@@ -345,7 +285,7 @@ import Layout from '~/layouts/Layout.astro';
           </div>
           <!-- Partner 5 -->
           <div
-            class="border-b md:border-b-0 border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+            class="border-r md:border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
           >
             <Image
               src={unbi}
@@ -355,7 +295,7 @@ import Layout from '~/layouts/Layout.astro';
           </div>
           <!-- Partner 6 -->
           <div
-            class="border-b md:border-b-0 border-r md:border-r-0 border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+            class="h-[160px] md:h-[221px] flex items-center justify-center p-6"
           >
             <Image
               src={primakara}
