@@ -1,25 +1,28 @@
 ---
+import { Image } from 'astro:assets';
 import imgBarong from '~/assets/images/barong.svg';
 ---
 
 <div
-  class="min-h-[500px] md:h-[275px] md:min-h-0 overflow-clip relative shrink-0 w-full flex items-center justify-center md:justify-start bg-black"
+  class="flex justify-center overflow-clip relative py-[78px] w-full bg-black"
   style={{ backgroundImage: "linear-gradient(264.72deg, rgb(22, 22, 22) 35.479%, rgb(3, 3, 3) 73.631%)" }}
 >
   <div
-    class="absolute h-[454px] md:h-[396px] mix-blend-color-dodge md:mix-blend-luminosity opacity-30 right-1/2 translate-x-1/2 md:translate-x-0 md:right-0 top-1/2 -translate-y-1/2 w-[740px] md:w-[634px] overflow-hidden pointer-events-none"
+    class="absolute h-[454px] w-[790px] left-0 top-[-72px] mix-blend-luminosity opacity-30 overflow-hidden pointer-events-none sm:left-auto sm:-right-1/2 md:right-[-160px] lg:right-[-130px] lg:top-[-100px]"
   >
-    <img
+    <Image
       alt=""
-      class="absolute block max-w-none h-full object-cover left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-auto md:right-0"
-      src={imgBarong.src}
-    >
+      class="w-full h-full object-cover mix-blend-color-dodge"
+      src={imgBarong}
+      loading="lazy"
+    />
   </div>
+
   <div
-    class="content-stretch flex flex-col gap-[50px] items-center md:items-start px-[22px] md:px-[135px] relative z-10 w-full max-w-[1440px] mx-auto text-center md:text-left"
+    class="flex flex-col gap-[50px] items-start relative z-10 px-6 max-w-[1170px] w-full"
   >
     <p
-      class="font-bold leading-[50px] md:leading-[normal] text-[32px] md:text-[24px] text-white tracking-[1px] uppercase w-[300px] md:w-[635px] whitespace-pre-wrap"
+      class="font-bold leading-[1.56] md:leading-[normal] text-[32px] md:text-[24px] text-white tracking-[1px] uppercase md:w-[635px]"
     >
       unlock the full potential of your business through DIGITAL
     </p>
