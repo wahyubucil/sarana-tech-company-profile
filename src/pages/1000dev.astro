@@ -1,0 +1,370 @@
+---
+import { Image } from 'astro:assets';
+import banner2Img7 from '~/assets/images/1000dev/banner2-img7.jpg';
+import banner2Img12 from '~/assets/images/1000dev/banner2-img12.jpg';
+import banner2Img13 from '~/assets/images/1000dev/banner2-img13.jpg';
+import banner2Img14 from '~/assets/images/1000dev/banner2-img14.jpg';
+import banner2Img17 from '~/assets/images/1000dev/banner2-img17.jpg';
+import fundamental from '~/assets/images/1000dev/fundamental.png';
+import gdgBali from '~/assets/images/1000dev/gdg-bali.png';
+import heroBg from '~/assets/images/1000dev/hero-bg.jpg';
+import heroText from '~/assets/images/1000dev/hero-text.png';
+import logoText from '~/assets/images/1000dev/logo-text.png';
+import logoTriangle from '~/assets/images/1000dev/logo-triangle.png';
+import logo2Text from '~/assets/images/1000dev/logo2-text.png';
+import logo2Triangle from '~/assets/images/1000dev/logo2-triangle.png';
+import primakara from '~/assets/images/1000dev/primakara.png';
+import unbi from '~/assets/images/1000dev/unbi.png';
+import uxdIsland from '~/assets/images/1000dev/uxd-island.png';
+import webfeeling from '~/assets/images/1000dev/webfeeling.png';
+import Layout from '~/layouts/Layout.astro';
+---
+
+<Layout title="#1000Dev | SaranaTech" hideCta={true}>
+  <main class="w-full flex flex-col items-center bg-white">
+    <!-- Header Section -->
+    <section
+      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 py-10 md:py-[60px]"
+    >
+      <h1
+        class="font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] tracking-[1px]  max-w-[990px] capitalize"
+      >
+        #1000Dev: Empowering Bali's Young Talented Developers Through Impactful
+        Campaign
+      </h1>
+    </section>
+
+    <!-- Hero Banner -->
+    <section
+      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 mb-10 md:mb-[100px]"
+    >
+      <div
+        class="h-[280px] md:h-[380px] overflow-hidden relative w-full bg-[#343434]"
+      >
+        <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+          <Image
+            src={heroBg}
+            alt=""
+            class="absolute h-full w-full object-cover object-center"
+          />
+          <div class="absolute bg-black/30 inset-0"></div>
+        </div>
+
+        <div
+          class="absolute inset-0 pointer-events-none overflow-hidden mix-blend-overlay opacity-50"
+        >
+          <Image
+            src={heroText}
+            alt=""
+            class="absolute h-full w-full object-cover object-center scale-110"
+          />
+        </div>
+
+        <div
+          class="absolute flex flex-col md:flex-row items-center justify-center inset-0 z-10 p-6 md:p-0"
+        >
+          <div
+            class="flex items-center gap-4 md:absolute md:left-[80px] md:top-[146px]"
+          >
+            <Image
+              src={logoTriangle}
+              alt="Triangle"
+              class="w-[48px] md:w-[68px] object-contain"
+            />
+            <Image
+              src={logoText}
+              alt="Bali Movement #1000Devs"
+              class="w-[160px] md:w-[226px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section
+      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 pb-10 md:pb-[100px] flex flex-col gap-[40px] md:gap-[50px]"
+    >
+      <!-- About -->
+      <div class="flex flex-col gap-[20px] items-start w-full">
+        <h2
+          class="font-bold text-[20px] leading-[28.6px] tracking-[1px]  capitalize"
+        >
+          About #1000Dev
+        </h2>
+        <div
+          class="font-normal text-[15px] leading-[28px] text-[#767676] w-full md:max-w-[640px] flex flex-col gap-4"
+        >
+          <p>
+            SaranaTech, in collaboration with industry leaders, developer
+            communities, and educational institutions, has spearheaded an
+            impactful campaign called #1000Dev to empower young and talented
+            developers in Bali. This initiative aims to provide a platform for
+            learning, collaboration, and growth, positioning Bali as a hub for
+            tech talent.
+          </p>
+          <p>
+            The primary objective of #1000Dev is to identify and support 1000
+            talented developers in Bali, fostering their growth and creating
+            pathways for success. By investing in the local tech community,
+            SaranaTech aims to cultivate a pool of skilled professionals who can
+            contribute to the development of Bali's digital economy.
+          </p>
+          <p>
+            Through #1000Dev, SaranaTech has taken a proactive role in
+            empowering and supporting young talented developers in Bali. By
+            providing access to training, mentorship, networking opportunities,
+            and job placements, the campaign has helped shape the future of the
+            local tech industry. As a result, Bali's tech community is poised
+            for growth and poised to make a significant impact on the digital
+            landscape.
+          </p>
+        </div>
+      </div>
+
+      <!-- Engaging -->
+      <div class="flex flex-col gap-[20px] items-start w-full">
+        <h2
+          class="font-bold text-[20px] leading-[28.6px] tracking-[1px]  capitalize"
+        >
+          Engaging The Developer Community
+        </h2>
+        <p
+          class="font-normal text-[15px] leading-[28px] text-[#767676] w-full md:max-w-[640px]"
+        >
+          The #1000Dev campaign has garnered extensive support from the tech
+          community in Bali, including the active involvement of the Google
+          Developer Group Bali. This partnership has brought together
+          experienced professionals and aspiring developers, fostering a vibrant
+          ecosystem of knowledge sharing and mentorship.
+        </p>
+      </div>
+
+      <!-- Support -->
+      <div class="flex flex-col gap-[20px] items-start w-full">
+        <h2
+          class="font-bold text-[20px] leading-[28.6px] tracking-[1px]  capitalize"
+        >
+          Support From Educational Institutions
+        </h2>
+        <p
+          class="font-normal text-[15px] leading-[28px] text-[#767676] w-full md:max-w-[640px]"
+        >
+          Primakara University and Bali International University (UNBI) are
+          among the educational institutions that have rallied behind the
+          #1000Dev campaign. They have recognized the importance of nurturing
+          and harnessing the potential of their students in the field of
+          technology. By offering their resources and expertise, these
+          institutions contribute to the campaign's success.
+        </p>
+      </div>
+
+      <!-- Objectives -->
+      <div class="flex flex-col gap-[20px] items-start w-full">
+        <h2
+          class="font-bold text-[20px] leading-[28.6px] tracking-[1px]  capitalize"
+        >
+          #1000Dev Key Objectives:
+        </h2>
+        <ol
+          class="font-normal text-[15px] leading-[28px] text-[#767676] w-full md:max-w-[640px] list-decimal pl-5 space-y-4"
+        >
+          <li>
+            <span class=" font-semibold">Workshops and Training Sessions</span>
+            <br>
+            SaranaTech organizes hands-on workshops and training sessions
+            conducted by experienced industry professionals. These sessions
+            cover various topics, including programming languages, software
+            development methodologies, and emerging technologies.
+          </li>
+          <li>
+            <span class=" font-semibold">Bootcamp Program</span>
+            <br>
+            #1000Dev provides participants with access to a network of mentors
+            who offer guidance, support, and industry insights. Mentors play a
+            crucial role in nurturing talent and providing personalized advice
+            to help young developers overcome challenges and reach their full
+            potential.
+          </li>
+          <li>
+            <span class=" font-semibold">Networking Events</span>
+            <br>
+            SaranaTech organizes networking events that bring together industry
+            professionals, entrepreneurs, and developers. These events offer
+            opportunities for knowledge-sharing, collaborations, and potential
+            career advancements.
+          </li>
+          <li>
+            <span class=" font-semibold">Provision of work tools</span>
+            <br>
+            We provide work tools in the form of laptops / PCs for young talents
+            with good coding talent but limited funds to get qualified work
+            tools.
+          </li>
+          <li>
+            <span class=" font-semibold"
+              >Job Placement and Internship Opportunities</span
+            >
+            <br>
+            Through partnerships with local businesses and organizations,
+            #1000Dev facilitates job placements and internship opportunities for
+            talented developers, enabling them to gain real-world experience and
+            kickstart their careers.
+          </li>
+        </ol>
+      </div>
+
+      <!-- Secondary Banner -->
+      <div
+        class="h-[380px] overflow-hidden relative w-full bg-[#343434] mt-6 md:mt-10 group"
+      >
+        <!-- Background Collage Desktop (Hidden on Mobile for simpler view) -->
+        <div
+          class="hidden md:block absolute inset-0 pointer-events-none opacity-50 group-hover:opacity-60 transition-opacity duration-500"
+        >
+          <Image
+            src={banner2Img17}
+            alt=""
+            class="absolute h-[648px] w-[364px] object-cover left-0 top-1/2 -translate-y-1/2"
+          />
+          <Image
+            src={banner2Img12}
+            alt=""
+            class="absolute h-[273px] w-[273px] object-cover left-1/2 top-0"
+          />
+          <Image
+            src={banner2Img13}
+            alt=""
+            class="absolute h-[306px] w-[443px] object-cover right-0 bottom-[-50px]"
+          />
+          <Image
+            src={banner2Img7}
+            alt=""
+            class="absolute h-[272px] w-[362px] object-cover left-[40%] bottom-[-69px]"
+          />
+          <Image
+            src={banner2Img14}
+            alt=""
+            class="absolute h-[213px] w-[334px] object-cover left-[30%] bottom-[50px]"
+          />
+        </div>
+        <!-- Mobile Background -->
+        <div class="md:hidden absolute inset-0 pointer-events-none opacity-40">
+          <Image
+            src={banner2Img17}
+            alt=""
+            class="absolute h-full w-full object-cover"
+          />
+        </div>
+
+        <div
+          class="absolute inset-0 bg-linear-to-r from-black/80 to-black/20 md:bg-[linear-gradient(108deg,rgba(26,26,26,0.62)_17%,#000_92%)] pointer-events-none"
+        ></div>
+
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 gap-8"
+        >
+          <h3
+            class="font-semibold text-[24px] md:text-[32px] leading-[36px] md:leading-[44px] text-white tracking-[1px] capitalize"
+          >
+            Helping Bali's best talented young people<br
+              class="hidden md:block"
+            >
+            to become World-class developers
+          </h3>
+          <div class="flex items-center gap-3">
+            <Image
+              src={logo2Triangle}
+              alt="Triangle"
+              class="w-[34px] object-contain"
+            />
+            <Image
+              src={logo2Text}
+              alt="Bali Movement #1000Devs"
+              class="w-[113px] object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section
+      class="w-full bg-white flex flex-col items-center px-4 xl:px-0 py-10 md:py-[100px] border-t border-[#E5E5E5]"
+    >
+      <div
+        class="w-full max-w-[1140px] mx-auto flex flex-col items-center gap-10 md:gap-[70px]"
+      >
+        <h2
+          class="font-bold text-[24px] md:text-[26px] leading-[28.6px] tracking-[1px]  uppercase text-center"
+        >
+          OUR PARTNERS
+        </h2>
+
+        <!-- Grid of logos -->
+        <div class="grid grid-cols-2 md:grid-cols-3 w-full">
+          <!-- Partner 1 -->
+          <div
+            class="border-b border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+          >
+            <Image
+              src={gdgBali}
+              alt="GDG Bali"
+              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+            />
+          </div>
+          <!-- Partner 2 -->
+          <div
+            class="border-b border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex flex-col items-center justify-center p-6 gap-4"
+          >
+            <Image
+              src={webfeeling}
+              alt="Webfeeling"
+              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+            />
+          </div>
+          <!-- Partner 3 -->
+          <div
+            class="border-b border-r md:border-r-0 border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+          >
+            <Image
+              src={uxdIsland}
+              alt="UXD Island"
+              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+            />
+          </div>
+          <!-- Partner 4 -->
+          <div
+            class="border-b md:border-b-0 border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+          >
+            <Image
+              src={fundamental}
+              alt="Fundamental"
+              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+            />
+          </div>
+          <!-- Partner 5 -->
+          <div
+            class="border-b md:border-b-0 border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+          >
+            <Image
+              src={unbi}
+              alt="UNBI"
+              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+            />
+          </div>
+          <!-- Partner 6 -->
+          <div
+            class="border-b md:border-b-0 border-r md:border-r-0 border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+          >
+            <Image
+              src={primakara}
+              alt="Primakara"
+              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

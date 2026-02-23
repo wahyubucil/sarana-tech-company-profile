@@ -90,7 +90,7 @@ export const Navigation = () => {
             href="/"
             onClick={() => setIsOpen(false)}
             className={cn(
-              'transition-all delay-100 duration-500 hover:text-[#989898]',
+              'transition-all delay-100 duration-500 hover:text-[#767676]',
               isOpen
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-[20px] opacity-0',
@@ -103,7 +103,7 @@ export const Navigation = () => {
             href="/#services"
             onClick={() => setIsOpen(false)}
             className={cn(
-              'transition-all delay-150 duration-500 hover:text-[#989898]',
+              'transition-all delay-150 duration-500 hover:text-[#767676]',
               isOpen
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-[20px] opacity-0',
@@ -115,7 +115,7 @@ export const Navigation = () => {
             href="/case-study"
             onClick={() => setIsOpen(false)}
             className={cn(
-              'transition-all delay-200 duration-500 hover:text-[#989898]',
+              'transition-all delay-200 duration-500 hover:text-[#767676]',
               isOpen
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-[20px] opacity-0',
@@ -127,7 +127,7 @@ export const Navigation = () => {
             href="/1000dev"
             onClick={() => setIsOpen(false)}
             className={cn(
-              'transition-all delay-250 duration-500 hover:text-[#989898]',
+              'transition-all delay-250 duration-500 hover:text-[#767676]',
               isOpen
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-[20px] opacity-0',
@@ -139,7 +139,7 @@ export const Navigation = () => {
             href="/contact-us"
             onClick={() => setIsOpen(false)}
             className={cn(
-              'transition-all delay-300 duration-500 hover:text-[#989898]',
+              'transition-all delay-300 duration-500 hover:text-[#767676]',
               isOpen
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-[20px] opacity-0',
