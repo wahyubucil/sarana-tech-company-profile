@@ -75,7 +75,7 @@ If you are tasked with writing or running tests, follow these guidelines:
 
 ### Styling & Formatting
 *   **Tailwind CSS (v4):** All styling must be done using Tailwind CSS utility classes.
-*   **Dynamic Classes:** Use the `cn` utility from `~/lib/utils` (combines `clsx` and `tailwind-merge`) instead of raw template literals for conditional or dynamic Tailwind classes (e.g., `className={cn('base-class', isActive && 'active-class')}`).
+*   **Dynamic Classes:** ALWAYS use the `cn` utility from `~/lib/utils` (combines `clsx` and `tailwind-merge`) instead of raw template literals or string concatenation for ANY conditional or dynamic Tailwind classes (e.g., use `class={cn('base-class', isActive && 'active-class')}` instead of `class={\`base-class ${isActive ? 'active-class' : ''}\`}`).
 *   **Inline Classes:** Prefer inline utility classes over creating custom CSS files with `@apply`. If a component becomes too class-heavy, extract it into a smaller React/Astro component.
 *   **Class Grouping & Sorting:** Tailwind classes are automatically sorted using Biome (`nursery/useSortedClasses`). Run `bunx @biomejs/biome check --write --unsafe` to sort them.
 *   **Immutability:** Use `const` over `let`. Do not mutate objects or arrays; return new instances (e.g., `[...arr, newItem]`).

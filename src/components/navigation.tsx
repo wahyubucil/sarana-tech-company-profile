@@ -137,7 +137,7 @@ export const Navigation = () => {
             #1000Dev
           </a>
           <a
-            href="/contact"
+            href="/contact-us"
             onClick={() => setIsOpen(false)}
             className={cn(
               'transition-all delay-300 duration-500 hover:text-[#989898]',

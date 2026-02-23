@@ -1,0 +1,157 @@
+---
+import Layout from '~/layouts/Layout.astro';
+---
+
+<Layout title="Contact Us | SaranaTech" hideCta={true}>
+  <main class="w-full flex flex-col items-center">
+    <section
+      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 py-10 md:py-[60px]"
+    >
+      <h1
+        class="font-bold text-[32px] leading-[48px] md:text-[40px] md:leading-[60px] tracking-[1px] text-[#101010] max-w-[570px]"
+      >
+        Reach Out to Us for Further Inquiries and Collaboration Opportunities
+      </h1>
+    </section>
+
+    <section
+      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 pb-20 md:pb-[100px]"
+    >
+      <div
+        class="flex flex-col md:flex-row gap-[40px] md:gap-[30px] items-start w-full"
+      >
+        <!-- Left Column -->
+        <div
+          class="flex flex-col gap-[40px] flex-1 max-w-[570px] text-[#989898] text-[15px] leading-[28px]"
+        >
+          <p>
+            We value your feedback and look forward to building productive
+            relationships with individuals and organizations alike. Contact us
+            today and let's explore how we can work together to achieve your
+            goals.
+          </p>
+          <div class="text-[#101010]">
+            <p class="font-bold mb-1">PT Sarana Digital Solusindo</p>
+            <p class="mb-1 text-[#989898]">
+              <span class="font-semibold">Office</span>
+              : Perum. Raya Kampial No S11, Nusa Dua, Bali
+            </p>
+            <p class="mb-1 text-[#989898]">
+              <span class="font-semibold">Whatsapp</span>
+              :
+              <a
+                href="https://wa.me/6281338270676"
+                class="underline hover:text-[#101010] transition-colors"
+                >+62 813-3827-0676</a
+              >
+            </p>
+            <p class="text-[#989898]">
+              <span class="font-bold">Email</span>
+              :
+              <a
+                href="mailto:info@sarana.tech"
+                class="underline hover:text-[#101010] transition-colors"
+                >info@sarana.tech</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column (Form) -->
+        <div class="flex flex-col flex-1 w-full gap-[24px]">
+          <div class="flex flex-col gap-[6px]">
+            <label for="name" class="font-medium text-[14px] text-[#101010]"
+              >Your name</label
+            >
+            <input
+              type="text"
+              id="name"
+              placeholder="Type your name here"
+              class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] text-[#101010] placeholder:text-[#989898] outline-none focus:border-[#101010] transition-colors w-full"
+            >
+          </div>
+
+          <div class="flex flex-col gap-[6px]">
+            <label for="company" class="font-medium text-[14px] text-[#101010]"
+              >Company name</label
+            >
+            <input
+              type="text"
+              id="company"
+              placeholder="Type your company name here"
+              class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] text-[#101010] placeholder:text-[#989898] outline-none focus:border-[#101010] transition-colors w-full"
+            >
+          </div>
+
+          <div class="flex flex-col gap-[6px]">
+            <label for="email" class="font-medium text-[14px] text-[#101010]"
+              >Your email</label
+            >
+            <input
+              type="email"
+              id="email"
+              placeholder="Type your email here"
+              class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] text-[#101010] placeholder:text-[#989898] outline-none focus:border-[#101010] transition-colors w-full"
+            >
+          </div>
+
+          <div class="flex flex-col gap-[6px]">
+            <label for="topic" class="font-medium text-[14px] text-[#101010]"
+              >Topic of discussion</label
+            >
+            <div class="relative w-full">
+              <select
+                id="topic"
+                class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] text-[#101010] outline-none focus:border-[#101010] transition-colors w-full appearance-none cursor-pointer"
+              >
+                <option value="projects">About projects</option>
+                <option value="careers">Careers</option>
+                <option value="partnerships">Partnerships</option>
+                <option value="other">Other</option>
+              </select>
+              <div
+                class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none"
+              >
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 1.5L6 6.5L11 1.5"
+                    stroke="#555770"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-[6px]">
+            <label for="message" class="font-medium text-[14px] text-[#101010]"
+              >Your message</label
+            >
+            <textarea
+              id="message"
+              placeholder="Type your message here"
+              rows="4"
+              class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] text-[#101010] placeholder:text-[#989898] outline-none focus:border-[#101010] transition-colors w-full resize-y min-h-[108px]"
+            ></textarea>
+          </div>
+
+          <button
+            type="button"
+            class="bg-[#15c912] text-white font-bold text-[12px] tracking-[1px] uppercase py-[14px] px-[30px] w-full hover:bg-[#12b310] transition-colors duration-300 mt-2"
+          >
+            SEND MESSAGE
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
