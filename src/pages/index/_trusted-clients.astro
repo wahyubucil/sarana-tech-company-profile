@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import imgEcoBeachCity from '~/assets/images/clients/eco-beach-city.png';
 import imgPawiba from '~/assets/images/clients/pawiba.png';
 import imgSunMotor from '~/assets/images/clients/sun-motor.png';
@@ -31,56 +32,62 @@ import imgWebfeeling from '~/assets/images/clients/webfeeling.png';
       <div
         class="border-b border-r border-[#e5e5e5] h-[221px] flex items-center justify-center p-8"
       >
-        <img
+        <Image
           alt="SUN Motor"
           class="max-w-[150px] max-h-[150px] object-contain"
-          src={imgSunMotor.src}
-        >
+          src={imgSunMotor}
+          loading="lazy"
+        />
       </div>
       <div
         class="border-b border-r border-[#e5e5e5] h-[221px] flex items-center justify-center p-8"
       >
-        <img
+        <Image
           alt="SUN Rental"
           class="max-w-[150px] max-h-[150px] object-contain"
-          src={imgSunRental.src}
-        >
+          src={imgSunRental}
+          loading="lazy"
+        />
       </div>
       <div
         class="border-b border-r border-[#e5e5e5] h-[221px] flex items-center justify-center p-8"
       >
-        <img
+        <Image
           alt="UXD Island"
           class="max-w-[150px] max-h-[150px] object-contain"
-          src={imgUxdIsland.src}
-        >
+          src={imgUxdIsland}
+          loading="lazy"
+        />
       </div>
       <div
         class="border-b md:border-b-0 border-r border-[#e5e5e5] h-[221px] flex items-center justify-center p-8"
       >
-        <img
+        <Image
           alt="Eco Beach City"
           class="max-w-[150px] max-h-[150px] object-contain"
-          src={imgEcoBeachCity.src}
-        >
+          src={imgEcoBeachCity}
+          loading="lazy"
+        />
       </div>
       <div
         class="border-b md:border-b-0 border-r border-[#e5e5e5] h-[221px] flex items-center justify-center p-8"
       >
-        <img
+        <Image
           alt="Webfeeling"
           class="max-w-[150px] max-h-[150px] object-contain"
-          src={imgWebfeeling.src}
-        >
+          src={imgWebfeeling}
+          loading="lazy"
+        />
       </div>
       <div
         class="border-b md:border-b-0 border-r border-[#e5e5e5] h-[221px] flex items-center justify-center p-8"
       >
-        <img
+        <Image
           alt="Pawiba"
           class="max-w-[150px] max-h-[150px] object-contain"
-          src={imgPawiba.src}
-        >
+          src={imgPawiba}
+          loading="lazy"
+        />
       </div>
     </div>
   </div>

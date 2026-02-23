@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import imgDashboardMockup from '~/assets/images/works/dashboard-mockup.png';
 import imgEcoBeachCityMap from '~/assets/images/works/eco-beach-city-map.png';
 import imgMobileAppMockup from '~/assets/images/works/mobile-app-mockup.png';
@@ -31,11 +32,12 @@ import imgWebAppMockup from '~/assets/images/works/web-app-mockup.png';
       <div
         class="relative h-[230px] w-full flex items-center justify-center p-4"
       >
-        <img
+        <Image
           alt="Eco Beach City"
           class="max-w-full max-h-full object-contain"
-          src={imgEcoBeachCityMap.src}
-        >
+          src={imgEcoBeachCityMap}
+          loading="lazy"
+        />
       </div>
       <div
         class="bg-[#f1f1f1] lg:absolute lg:inset-0 lg:opacity-0 lg:group-hover:opacity-90 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4 h-full"
@@ -55,11 +57,12 @@ import imgWebAppMockup from '~/assets/images/works/web-app-mockup.png';
       <div
         class="relative h-[230px] w-full flex items-center justify-center p-4"
       >
-        <img
+        <Image
           alt="Mobile App"
           class="max-w-full max-h-[120%] object-cover object-top"
-          src={imgMobileAppMockup.src}
-        >
+          src={imgMobileAppMockup}
+          loading="lazy"
+        />
       </div>
       <div
         class="bg-[#f1f1f1] lg:absolute lg:inset-0 lg:opacity-0 lg:group-hover:opacity-90 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4 h-full"
@@ -73,11 +76,12 @@ import imgWebAppMockup from '~/assets/images/works/web-app-mockup.png';
       class="bg-[#f3f3f3] h-auto lg:h-[230px] flex flex-col overflow-hidden relative shrink-0 w-full group cursor-pointer lg:block"
     >
       <div class="relative h-[230px] w-full flex items-center justify-center">
-        <img
+        <Image
           alt="Web Application"
           class="max-w-[120%] max-h-[120%] object-cover"
-          src={imgWebAppMockup.src}
-        >
+          src={imgWebAppMockup}
+          loading="lazy"
+        />
       </div>
       <div
         class="bg-[#f1f1f1] lg:absolute lg:inset-0 lg:opacity-0 lg:group-hover:opacity-90 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4 h-full"
@@ -95,11 +99,12 @@ import imgWebAppMockup from '~/assets/images/works/web-app-mockup.png';
       <div
         class="relative h-[230px] w-full flex items-center justify-center p-4"
       >
-        <img
+        <Image
           alt="Dashboard"
           class="max-w-full max-h-full object-contain"
-          src={imgDashboardMockup.src}
-        >
+          src={imgDashboardMockup}
+          loading="lazy"
+        />
       </div>
       <div
         class="bg-[#f1f1f1] lg:absolute lg:inset-0 lg:opacity-0 lg:group-hover:opacity-90 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4 h-full"
