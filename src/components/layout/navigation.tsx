@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Logo } from '~/components/logo';
 import { cn } from '~/lib/utils';
+import { Logo } from './logo';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,9 +123,8 @@ export const Navigation = () => {
           >
             Case Study
           </a>
-          {/* biome-ignore lint/a11y/useValidAnchor: valid navigation link */}
           <a
-            href="/#1000dev"
+            href="/1000dev"
             onClick={() => setIsOpen(false)}
             className={cn(
               'transition-all delay-250 duration-500 hover:text-[#989898]',

@@ -1,7 +1,7 @@
 ---
-import { Logo } from '~/components/logo.tsx';
-import { Navigation } from '~/components/navigation.tsx';
 import { cn } from '~/lib/utils';
+import { Logo } from './logo.tsx';
+import { Navigation } from './navigation.tsx';
 
 const pathname = Astro.url.pathname;
 const currentPath =
@@ -65,11 +65,11 @@ const currentPath =
       <div
         class={cn(
           "flex flex-col justify-center relative shrink-0 cursor-pointer",
-          currentPath === "#1000dev" ? "text-[#727272]" : "text-[#101010]",
+          currentPath === "1000dev" ? "text-[#727272]" : "text-[#101010]",
         )}
       >
         <a
-          href="/#1000dev"
+          href="/1000dev"
           class="leading-[20px] transition-colors duration-300 ease-in-out hover:text-[#727272]"
           >#1000Dev</a
         >
