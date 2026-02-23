@@ -1,47 +1,67 @@
 ---
-import imgLogoDark from '~/assets/images/logo-dark.png';
+import { Logo } from '~/components/logo.tsx';
 import { Navigation } from '~/components/navigation.tsx';
 ---
 
 <header
-  class="h-[86px] relative shrink-0 w-full max-w-[1170px] mx-auto px-4 md:px-0"
+  class="h-[86px] flex items-center justify-between w-full max-w-[1170px] mx-auto px-4 xl:px-0"
 >
-  <div class="absolute h-[34px] left-4 md:left-[-0.5px] top-[25.5px] w-[127px]">
-    <a href="/" class="relative z-30 block size-full"
-      ><img
-        alt="SaranaTech"
-        class="absolute block max-w-none size-full"
-        src={imgLogoDark.src}
-      ></a
+  <div class="relative h-[34px] w-[127px] shrink-0">
+    <a
+      href="/"
+      class="relative z-30 block size-full"
+      aria-label="SaranaTech Logo"
     >
+      <Logo variant="dark" />
+    </a>
   </div>
 
   <!-- Desktop Navigation -->
   <nav
-    class="-translate-y-1/2 hidden md:flex absolute content-stretch font-semibold gap-[35px] items-start leading-none py-[12px] right-[-0.5px] text-[12px] top-[calc(50%+0.5px)] uppercase whitespace-nowrap"
+    class="hidden md:flex content-stretch font-semibold gap-[35px] items-center leading-none py-[12px] text-[12px] uppercase whitespace-nowrap"
   >
     <div class="flex flex-col justify-center relative shrink-0 text-[#727272]">
-      <a href="/" class="leading-[20px] hover:text-[#101010]">HOME</a>
+      <a
+        href="/"
+        class="leading-[20px] transition-colors duration-300 ease-in-out hover:text-[#101010]"
+        >HOME</a
+      >
     </div>
     <div
-      class="flex flex-col justify-center relative shrink-0 text-[#101010] hover:text-[#727272] cursor-pointer"
+      class="flex flex-col justify-center relative shrink-0 text-[#101010] cursor-pointer"
     >
-      <a href="#services" class="leading-[20px]">services</a>
+      <a
+        href="#services"
+        class="leading-[20px] transition-colors duration-300 ease-in-out hover:text-[#727272]"
+        >services</a
+      >
     </div>
     <div
-      class="flex flex-col justify-center relative shrink-0 text-[#101010] hover:text-[#727272] cursor-pointer"
+      class="flex flex-col justify-center relative shrink-0 text-[#101010] cursor-pointer"
     >
-      <a href="/case-study" class="leading-[20px]">Case study</a>
+      <a
+        href="/case-study"
+        class="leading-[20px] transition-colors duration-300 ease-in-out hover:text-[#727272]"
+        >Case study</a
+      >
     </div>
     <div
-      class="flex flex-col justify-center relative shrink-0 text-[#101010] hover:text-[#727272] cursor-pointer"
+      class="flex flex-col justify-center relative shrink-0 text-[#101010] cursor-pointer"
     >
-      <a href="#1000dev" class="leading-[20px]">#1000Dev</a>
+      <a
+        href="#1000dev"
+        class="leading-[20px] transition-colors duration-300 ease-in-out hover:text-[#727272]"
+        >#1000Dev</a
+      >
     </div>
     <div
-      class="flex flex-col justify-center relative shrink-0 text-[#101010] hover:text-[#727272] cursor-pointer"
+      class="flex flex-col justify-center relative shrink-0 text-[#101010] cursor-pointer"
     >
-      <a href="/contact" class="leading-[20px]">contact us</a>
+      <a
+        href="/contact"
+        class="leading-[20px] transition-colors duration-300 ease-in-out hover:text-[#727272]"
+        >contact us</a
+      >
     </div>
   </nav>
 
