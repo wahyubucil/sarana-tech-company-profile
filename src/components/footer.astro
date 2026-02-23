@@ -4,100 +4,101 @@ import { Logo } from '~/components/logo.tsx';
 ---
 
 <footer
-  class="bg-[#252525] content-stretch flex flex-col gap-[30px] items-center overflow-clip py-[60px] relative shrink-0 w-full"
+  class="bg-[#252525] content-stretch flex flex-col gap-[50px] items-center overflow-clip py-[60px] relative shrink-0 w-full"
 >
   <div
-    class="content-stretch flex flex-col gap-[90px] items-center w-full max-w-[1170px] px-4 md:px-0"
+    class="content-stretch flex flex-col md:flex-row gap-[40px] md:gap-[150px] items-start w-full max-w-[1170px] px-6 xl:px-0"
   >
-    <div
-      class="content-stretch flex flex-col md:flex-row gap-[50px] md:gap-[150px] items-start w-full"
-    >
-      <div class="flex flex-col gap-6 w-full md:w-auto">
-        <div class="h-[34px] w-[127px]"><Logo variant="light" /></div>
-        <div class="font-normal leading-[24px] text-[#d8d8d8] text-[13px]">
-          <p>SaranaTech (PT Sarana Digital Solusindo),</p>
-          <p>{`We help realize the best potential of your `}</p>
-          <p>{`business with coding & art from the land of Bali.`}</p>
+    <div class="flex flex-col gap-6 w-full md:w-auto">
+      <div class="h-[34px] w-[127px]"><Logo variant="light" /></div>
+      <div class="font-normal leading-[24px] text-[#d8d8d8] text-[13px]">
+        <p>SaranaTech (PT Sarana Digital Solusindo),</p>
+        <p>{`We help realize the best potential of your `}</p>
+        <p>{`business with coding & art from the land of Bali.`}</p>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-[40px] md:gap-[150px] flex-wrap">
+      <div class="flex flex-col gap-6 order-3 md:order-1">
+        <p class="font-bold text-[16px] text-white uppercase">SITEMAP</p>
+        <div
+          class="font-normal leading-[32px] text-[#d8d8d8] text-[13px] flex flex-col"
+        >
+          <a
+            href="/case-study"
+            class="font-semibold hover:text-white transition-colors"
+            >Case Study</a
+          >
+          <a
+            href="/about"
+            class="font-semibold hover:text-white transition-colors"
+            >About Us</a
+          >
+          <a
+            href="/contact"
+            class="font-bold hover:text-white transition-colors"
+            >Contact Us</a
+          >
         </div>
       </div>
-      <div class="flex gap-[50px] md:gap-[150px] flex-wrap">
-        <div class="flex flex-col gap-6">
-          <p class="font-bold text-[16px] text-white uppercase">SITEMAP</p>
-          <div
-            class="font-normal leading-[32px] text-[#d8d8d8] text-[13px] flex flex-col"
-          >
+      <div class="flex flex-col gap-6 order-2">
+        <p class="font-bold text-[16px] text-white uppercase">Contact Us</p>
+        <div
+          class="font-normal leading-[24px] text-[#d8d8d8] text-[13px] flex flex-col gap-2"
+        >
+          <p class="font-bold">PT Sarana Digital Solusindo</p>
+          <p>
+            <span class="font-semibold">Office</span>
+            : Perum. Raya Kampial No S11, Nusa Dua, Bali
+          </p>
+          <p>
+            <span class="font-semibold">Whatsapp</span>
+            :
             <a
-              href="/case-study"
-              class="font-semibold hover:text-white transition-colors"
-              >Case Study</a
+              href="https://wa.me/6281338270676"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-white"
+              >+62 813-3827-0676</a
             >
-            <a
-              href="/about"
-              class="font-semibold hover:text-white transition-colors"
-              >About Us</a
+          </p>
+          <p>
+            <span class="font-bold">Email</span>
+            :
+            <a href="mailto:info@sarana.tech" class="underline hover:text-white"
+              >info@sarana.tech</a
             >
-            <a
-              href="/contact"
-              class="font-bold hover:text-white transition-colors"
-              >Contact Us</a
-            >
-          </div>
-        </div>
-        <div class="flex flex-col gap-6">
-          <p class="font-bold text-[16px] text-white uppercase">Contact Us</p>
-          <div
-            class="font-normal leading-[24px] text-[#d8d8d8] text-[13px] flex flex-col gap-2"
-          >
-            <p class="font-bold">PT Sarana Digital Solusindo</p>
-            <p>
-              <span class="font-semibold">Office</span>
-              : Perum. Raya Kampial No S11, Nusa Dua, Bali
-            </p>
-            <p>
-              <span class="font-semibold">Whatsapp</span>
-              :
-              <a href="tel:+6281338270676" class="underline hover:text-white"
-                >+62 813-3827-0676</a
-              >
-            </p>
-            <p>
-              <span class="font-bold">Email</span>
-              :
-              <a
-                href="mailto:info@sarana.tech"
-                class="underline hover:text-white"
-                >info@sarana.tech</a
-              >
-            </p>
-          </div>
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="w-full h-px bg-[#444] my-4" />
+  <div class="w-full h-px bg-[#444]" />
 
-    <div
-      class="flex flex-col md:flex-row justify-between items-center w-full gap-4"
-    >
-      <p
-        class="font-normal text-[#d8d8d8] text-[13px] text-center md:text-left"
+  <div
+    class="flex flex-col md:flex-row justify-between items-center w-full gap-4 max-w-[1170px] px-6 xl:px-0"
+  >
+    <p class="font-normal text-[#d8d8d8] text-[13px] text-center md:text-left">
+      © {new Date().getFullYear()} PT Sarana Digital Solusindo - All Rights
+      Reserved.
+    </p>
+    <div class="flex gap-4">
+      <a
+        href="https://www.instagram.com/saranatech.id"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="opacity-70 hover:opacity-100 transition-opacity text-white"
+        aria-label="Instagram"
+        ><FaInstagram size={17} /></a
       >
-        © 2023 PT Sarana Digital Solusindo - All Rights Reserved.
-      </p>
-      <div class="flex gap-4">
-        <a
-          href="https://instagram.com"
-          class="opacity-70 hover:opacity-100 transition-opacity text-white"
-          aria-label="Instagram"
-          ><FaInstagram size={17} /></a
-        >
-        <a
-          href="https://linkedin.com"
-          class="opacity-70 hover:opacity-100 transition-opacity text-white"
-          aria-label="LinkedIn"
-          ><FaLinkedinIn size={17} /></a
-        >
-      </div>
+      <a
+        href="https://www.linkedin.com/company/sarana-tech/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="opacity-70 hover:opacity-100 transition-opacity text-white"
+        aria-label="LinkedIn"
+        ><FaLinkedinIn size={17} /></a
+      >
     </div>
   </div>
 </footer>
