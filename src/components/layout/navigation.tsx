@@ -98,9 +98,8 @@ export const Navigation = () => {
           >
             Home
           </a>
-          {/* biome-ignore lint/a11y/useValidAnchor: valid navigation link */}
           <a
-            href="/#services"
+            href="/services"
             onClick={() => setIsOpen(false)}
             className={cn(
               'transition-all delay-150 duration-500 hover:text-[#767676]',
