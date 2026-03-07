@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import heroImg from '~/assets/images/case-study/hero.jpg';
+import { CaseStudyList } from '~/components/case-study/case-study-list';
+import Layout from '~/layouts/Layout.astro';
+---
+
+<Layout
+  title="Case Study - SaranaTech"
+  description="Discover our compelling case study on software development, showcasing our expertise in delivering innovative solutions."
+>
+  <!-- Hero Section -->
+  <section
+    class="relative h-[380px] w-full overflow-hidden flex flex-col justify-center items-center"
+  >
+    <Image
+      src={heroImg}
+      alt="Hero Case Study"
+      class="absolute inset-0 w-full h-full object-cover z-0"
+    />
+    <div class="absolute inset-0 bg-[#343434]/20 z-10"></div>
+    <div class="relative z-20 text-center">
+      <h1
+        class="text-white text-[40px] md:text-5xl font-semibold tracking-[6px] uppercase leading-tight"
+      >
+        CASE STUDY
+      </h1>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section class="py-20 md:py-[100px] px-6">
+    <div class="container mx-auto max-w-[1170px] w-full">
+      <CaseStudyList client:load />
+    </div>
+  </section>
+</Layout>
