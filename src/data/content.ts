@@ -5,7 +5,7 @@ export const companyInfo = {
     'We are a premier digital agency and startup incubator based in Bali, driving innovation through software development, talent empowerment, and smart solutions.',
   contact: {
     phone: '+62 813-3827-0676',
-    email: 'info@sarana.tech',
+    email: 'info@saranatech.id',
     website: 'www.sarana.tech',
     address: 'Bali, Indonesia',
   },
