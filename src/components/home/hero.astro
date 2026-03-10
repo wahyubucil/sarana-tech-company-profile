@@ -3,45 +3,51 @@ import HeroArt from './hero-art.astro';
 ---
 
 <div
-  class="h-[600px] overflow-clip relative shrink-0 w-full flex justify-center bg-black"
+  class="relative flex h-[600px] w-full shrink-0 justify-center overflow-clip bg-black"
 >
   <div
     class="absolute inset-0"
-    style={{ backgroundImage: "linear-gradient(248.6deg, rgb(37, 37, 37) 30.258%, rgb(0, 0, 0) 53.786%)" }}
-  />
+    style={{
+      backgroundImage:
+        'linear-gradient(248.6deg, rgb(37, 37, 37) 30.258%, rgb(0, 0, 0) 53.786%)',
+    }}
+  >
+  </div>
   <div
     class="absolute bottom-0 h-[155px] w-full lg:right-0 lg:h-[285px] lg:w-[640px] xl:h-[472px] xl:w-[1055px]"
   >
     <HeroArt
-      class="absolute block h-full w-[125%] left-[-10%] lg:w-none lg:left-[-40px]"
+      class="lg:w-none absolute left-[-10%] block h-full w-[125%] lg:left-[-40px]"
     />
   </div>
 
-  <div class="relative w-full max-w-[1440px] h-full flex items-center">
+  <div class="relative flex h-full w-full max-w-[1440px] items-center">
     <div
-      class="absolute content-stretch flex flex-col gap-[30px] items-start left-4 lg:left-[135px] z-10"
+      class="absolute left-4 z-10 flex flex-col content-stretch items-start gap-[30px] lg:left-[135px]"
     >
       <div
-        class="flex flex-col font-bold justify-center leading-none relative shrink-0 text-[#626262] text-[12px] tracking-[4px] uppercase"
+        class="relative flex shrink-0 flex-col justify-center text-[12px] leading-none font-bold tracking-[4px] text-[#626262] uppercase"
       >
         <p class="leading-[17px]">Art. Passion. Code.</p>
       </div>
       <div
-        class="flex flex-col font-bold justify-center leading-none relative shrink-0 text-[32px] md:text-[40px] text-white tracking-[2px] uppercase"
+        class="relative flex shrink-0 flex-col justify-center text-[32px] leading-none font-bold tracking-[2px] text-white uppercase md:text-[40px]"
       >
         <p class="leading-[40px] md:leading-[68px]">Digital Elevator Partner</p>
       </div>
       <p
-        class="font-normal min-h-[50px] leading-[25px] relative shrink-0 text-[14px] text-white w-full md:w-[369px] whitespace-pre-wrap"
+        class="relative min-h-[50px] w-full shrink-0 text-[14px] leading-[25px] font-normal whitespace-pre-wrap text-white md:w-[369px]"
       >
-        {`We help realize the best potential of your business with coding & art from the land of Bali`}
+        {
+          `We help realize the best potential of your business with coding & art from the land of Bali`
+        }
       </p>
       <a
         href="/contact-us"
-        class="border border-solid border-white content-stretch flex items-start px-[30px] py-[14px] relative shrink-0 text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
+        class="relative flex shrink-0 content-stretch items-start border border-solid border-white px-[30px] py-[14px] text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black"
       >
         <div
-          class="flex flex-col font-normal justify-center leading-none relative shrink-0 text-[12px] text-center tracking-[1px] uppercase whitespace-nowrap"
+          class="relative flex shrink-0 flex-col justify-center text-center text-[12px] leading-none font-normal tracking-[1px] whitespace-nowrap uppercase"
         >
           <p class="leading-[17px]">CONTACT US</p>
         </div>

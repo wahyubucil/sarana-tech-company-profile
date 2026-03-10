@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+
 import {
   Mobile,
   MonitorMobbile,
@@ -8,10 +9,12 @@ import {
   Shop,
   StatusUp,
 } from 'iconsax-react';
+
+import Layout from '~/layouts/Layout.astro';
+
 import imgHeroServices from '~/assets/images/services/hero.jpg';
 import imgTms from '~/assets/images/services/tms.jpg';
 import imgTracking from '~/assets/images/services/tracking.jpg';
-import Layout from '~/layouts/Layout.astro';
 
 const services = [
   {
@@ -79,35 +82,35 @@ const products = [
   description="Discover our wide range of digital services, including web design, web development, mobile apps, and system development."
 >
   <div
-    class="relative h-[380px] w-full flex flex-col justify-center items-center overflow-hidden"
+    class="relative flex h-[380px] w-full flex-col items-center justify-center overflow-hidden"
   >
-    <div class="absolute inset-0 pointer-events-none">
+    <div class="pointer-events-none absolute inset-0">
       <Image
         src={imgHeroServices}
         alt="Our Services"
-        class="w-full h-full object-cover"
+        class="h-full w-full object-cover"
         loading="eager"
       />
       <div class="absolute inset-0 bg-[#343434]/20"></div>
     </div>
     <h1
-      class="relative text-[32px] md:text-[40px] text-white font-semibold tracking-[6px] uppercase text-center leading-[44px]"
+      class="relative text-center text-[32px] leading-[44px] font-semibold tracking-[6px] text-white uppercase md:text-[40px]"
     >
       OUR SERVICES
     </h1>
   </div>
 
-  <section class="bg-[#fbfbfb] py-16 lg:py-[100px] px-6">
+  <section class="bg-[#fbfbfb] px-6 py-16 lg:py-[100px]">
     <div
-      class="container mx-auto max-w-[1170px] flex flex-col items-center gap-[60px]"
+      class="container mx-auto flex max-w-[1170px] flex-col items-center gap-[60px]"
     >
-      <div class="flex flex-col items-center gap-5 text-center max-w-[855px]">
+      <div class="flex max-w-[855px] flex-col items-center gap-5 text-center">
         <h2
-          class="text-[26px] font-bold text-[#101010] tracking-[1px] uppercase leading-[28.6px]"
+          class="text-[26px] leading-[28.6px] font-bold tracking-[1px] text-[#101010] uppercase"
         >
           services what we provide
         </h2>
-        <p class="text-[15px] text-[#767676] leading-[28px] font-normal">
+        <p class="text-[15px] leading-[28px] font-normal text-[#767676]">
           With our deep expertise in the latest technologies and industry best
           practices, we empower businesses to stay ahead in the digital
           landscape.
@@ -115,36 +118,43 @@ const products = [
       </div>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[45px] gap-y-[60px] w-full"
+        class="grid w-full grid-cols-1 gap-x-[45px] gap-y-[60px] md:grid-cols-2 lg:grid-cols-3"
       >
-        {services.map((service) => (
-          // biome-ignore lint/correctness/useJsxKeyInIterable: Astro static arrays do not require keys
-          <div class="flex flex-col items-start">
-            <service.icon size="35" color="#101010" variant="Linear" className="mb-8" />
-            <h3 class="mb-4 font-normal text-[#101010] text-[14px] uppercase tracking-[2px]">
-              {service.title}
-            </h3>
-            <div class="mb-6 h-[2px] w-[38px] bg-[#333]" />
-            <p class="text-[#767676] text-[14px] leading-[28px] tracking-[0.5px]">
-              {service.description}
-            </p>  
-          </div>
-        ))}
+        {
+          services.map((service) => (
+            // biome-ignore lint/correctness/useJsxKeyInIterable: Astro static arrays do not require keys
+            <div class="flex flex-col items-start">
+              <service.icon
+                size="35"
+                color="#101010"
+                variant="Linear"
+                className="mb-8"
+              />
+              <h3 class="mb-4 text-[14px] font-normal tracking-[2px] text-[#101010] uppercase">
+                {service.title}
+              </h3>
+              <div class="mb-6 h-[2px] w-[38px] bg-[#333]" />
+              <p class="text-[14px] leading-[28px] tracking-[0.5px] text-[#767676]">
+                {service.description}
+              </p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
 
-  <section class="bg-white py-16 lg:py-[100px] px-6">
+  <section class="bg-white px-6 py-16 lg:py-[100px]">
     <div
-      class="container mx-auto max-w-[1170px] flex flex-col items-center gap-[70px]"
+      class="container mx-auto flex max-w-[1170px] flex-col items-center gap-[70px]"
     >
-      <div class="flex flex-col items-center gap-5 text-center max-w-[855px]">
+      <div class="flex max-w-[855px] flex-col items-center gap-5 text-center">
         <h2
-          class="text-[26px] font-bold text-[#101010] tracking-[1px] uppercase leading-[28.6px]"
+          class="text-[26px] leading-[28.6px] font-bold tracking-[1px] text-[#101010] uppercase"
         >
           Our software product
         </h2>
-        <p class="text-[15px] text-[#767676] leading-[28px] font-normal">
+        <p class="text-[15px] leading-[28px] font-normal text-[#767676]">
           Powerful solution designed to streamline operations, enhance
           productivity, and drive business growth. Experience the transformative
           capabilities and unlock your full potential with our cutting-edge
@@ -155,24 +165,26 @@ const products = [
       <div
         class="grid w-full grid-cols-1 gap-[50px] sm:justify-center md:justify-center lg:grid-cols-3"
       >
-        {products.map((product) => (
-          // biome-ignore lint/correctness/useJsxKeyInIterable: Astro static arrays do not require keys
-          <div class="flex flex-col items-start sm:mx-auto sm:w-[480px] md:mx-auto md:w-[480px] lg:mx-0 lg:w-full">
-            <div class="relative mb-[14px] aspect-360/250 w-full overflow-hidden bg-gray-100">
-              <Image
-                src={product.image}
-                alt={product.title}
-                class="absolute inset-0 h-full w-full object-cover"
-              />
+        {
+          products.map((product) => (
+            // biome-ignore lint/correctness/useJsxKeyInIterable: Astro static arrays do not require keys
+            <div class="flex flex-col items-start sm:mx-auto sm:w-[480px] md:mx-auto md:w-[480px] lg:mx-0 lg:w-full">
+              <div class="relative mb-[14px] aspect-360/250 w-full overflow-hidden bg-gray-100">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
+              <h3 class="mb-[14px] text-[16px] font-semibold tracking-[1px] text-[#101010] uppercase">
+                {product.title}
+              </h3>
+              <p class="text-[13px] leading-[28px] text-[#767676]">
+                {product.description}
+              </p>
             </div>
-            <h3 class="mb-[14px] font-semibold text-[#101010] text-[16px] uppercase tracking-[1px]">
-              {product.title}
-            </h3>
-            <p class="text-[#767676] text-[13px] leading-[28px]">
-              {product.description}
-            </p>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>

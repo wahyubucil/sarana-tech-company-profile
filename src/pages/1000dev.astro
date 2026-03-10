@@ -1,5 +1,8 @@
 ---
 import { Image } from 'astro:assets';
+
+import Layout from '~/layouts/Layout.astro';
+
 import bannerTop from '~/assets/images/1000dev/1000dev-detail.png';
 import bannerBottom from '~/assets/images/1000dev/1000dev-detail-2.png';
 import fundamental from '~/assets/images/1000dev/1000dev-fundamental.svg';
@@ -9,17 +12,16 @@ import primakara from '~/assets/images/1000dev/1000dev-primakara.png';
 import unbi from '~/assets/images/1000dev/1000dev-unbi.png';
 import uxdIsland from '~/assets/images/1000dev/1000dev-uxd-island.png';
 import webfeeling from '~/assets/images/1000dev/1000dev-webfeeling.png';
-import Layout from '~/layouts/Layout.astro';
 ---
 
 <Layout title="#1000Dev | SaranaTech" hideCta={true}>
-  <main class="w-full flex flex-col items-center bg-white">
+  <main class="flex w-full flex-col items-center bg-white">
     <!-- Header Section -->
     <section
-      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 py-10 md:py-[60px]"
+      class="mx-auto w-full max-w-[1170px] px-4 py-10 md:py-[60px] xl:px-0"
     >
       <h1
-        class="font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] tracking-[1px] max-w-[990px] capitalize text-[#101010]"
+        class="max-w-[990px] text-[32px] leading-[48px] font-bold tracking-[1px] text-[#101010] capitalize md:text-[40px] md:leading-[60px]"
       >
         #1000Dev: Empowering Bali's Young Talented Developers Through Impactful
         Campaign
@@ -28,12 +30,12 @@ import Layout from '~/layouts/Layout.astro';
 
     <!-- Hero Banner -->
     <section
-      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 mb-10 md:mb-[100px]"
+      class="mx-auto mb-10 w-full max-w-[1170px] px-4 md:mb-[100px] xl:px-0"
     >
       <div
-        class="h-[280px] md:h-[380px] overflow-hidden relative w-full bg-[#343434]"
+        class="relative h-[280px] w-full overflow-hidden bg-[#343434] md:h-[380px]"
       >
-        <div class="absolute inset-0 pointer-events-none">
+        <div class="pointer-events-none absolute inset-0">
           <Image
             src={bannerTop}
             alt="1000Dev Banner"
@@ -42,15 +44,15 @@ import Layout from '~/layouts/Layout.astro';
         </div>
 
         <div
-          class="absolute flex flex-col md:flex-row items-center justify-center inset-0 z-10 p-6 md:p-0"
+          class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6 md:flex-row md:p-0"
         >
           <div
-            class="flex items-center md:absolute md:left-[80px] md:top-[146px]"
+            class="flex items-center md:absolute md:top-[146px] md:left-[80px]"
           >
             <Image
               src={devLogo}
               alt="Bali Movement #1000Devs"
-              class="w-[200px] md:w-[294px] object-contain"
+              class="w-[200px] object-contain md:w-[294px]"
             />
           </div>
         </div>
@@ -59,17 +61,17 @@ import Layout from '~/layouts/Layout.astro';
 
     <!-- Content Section -->
     <section
-      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 pb-10 md:pb-[100px] flex flex-col gap-[40px] md:gap-[50px]"
+      class="mx-auto flex w-full max-w-[1170px] flex-col gap-[40px] px-4 pb-10 md:gap-[50px] md:pb-[100px] xl:px-0"
     >
       <!-- About -->
-      <div class="flex flex-col gap-[20px] items-start w-full">
+      <div class="flex w-full flex-col items-start gap-[20px]">
         <h2
-          class="font-bold text-[20px] leading-[28.6px] tracking-[1px] capitalize text-[#101010]"
+          class="text-[20px] leading-[28.6px] font-bold tracking-[1px] text-[#101010] capitalize"
         >
           About #1000Dev
         </h2>
         <div
-          class="font-normal text-[15px] leading-[28px] text-[#989898] w-full md:max-w-[640px] flex flex-col gap-4"
+          class="flex w-full flex-col gap-4 text-[15px] leading-[28px] font-normal text-[#989898] md:max-w-[640px]"
         >
           <p>
             SaranaTech, in collaboration with industry leaders, developer
@@ -99,14 +101,14 @@ import Layout from '~/layouts/Layout.astro';
       </div>
 
       <!-- Engaging -->
-      <div class="flex flex-col gap-[20px] items-start w-full">
+      <div class="flex w-full flex-col items-start gap-[20px]">
         <h2
-          class="font-bold text-[20px] leading-[28.6px] tracking-[1px] capitalize text-[#101010]"
+          class="text-[20px] leading-[28.6px] font-bold tracking-[1px] text-[#101010] capitalize"
         >
           Engaging The Developer Community
         </h2>
         <p
-          class="font-normal text-[15px] leading-[28px] text-[#989898] w-full md:max-w-[640px]"
+          class="w-full text-[15px] leading-[28px] font-normal text-[#989898] md:max-w-[640px]"
         >
           The #1000Dev campaign has garnered extensive support from the tech
           community in Bali, including the active involvement of the Google
@@ -117,14 +119,14 @@ import Layout from '~/layouts/Layout.astro';
       </div>
 
       <!-- Support -->
-      <div class="flex flex-col gap-[20px] items-start w-full">
+      <div class="flex w-full flex-col items-start gap-[20px]">
         <h2
-          class="font-bold text-[20px] leading-[28.6px] tracking-[1px] capitalize text-[#101010]"
+          class="text-[20px] leading-[28.6px] font-bold tracking-[1px] text-[#101010] capitalize"
         >
           Support From Educational Institutions
         </h2>
         <p
-          class="font-normal text-[15px] leading-[28px] text-[#989898] w-full md:max-w-[640px]"
+          class="w-full text-[15px] leading-[28px] font-normal text-[#989898] md:max-w-[640px]"
         >
           Primakara University and Bali International University (UNBI) are
           among the educational institutions that have rallied behind the
@@ -136,69 +138,65 @@ import Layout from '~/layouts/Layout.astro';
       </div>
 
       <!-- Objectives -->
-      <div class="flex flex-col gap-[20px] items-start w-full">
+      <div class="flex w-full flex-col items-start gap-[20px]">
         <h2
-          class="font-bold text-[20px] leading-[28.6px] tracking-[1px] capitalize text-[#101010]"
+          class="text-[20px] leading-[28.6px] font-bold tracking-[1px] text-[#101010] capitalize"
         >
           #1000Dev Key Objectives:
         </h2>
         <ol
-          class="font-normal text-[15px] leading-[28px] text-[#989898] w-full md:max-w-[640px] list-decimal pl-5 space-y-4"
+          class="w-full list-decimal space-y-4 pl-5 text-[15px] leading-[28px] font-normal text-[#989898] md:max-w-[640px]"
         >
           <li>
             <span class="font-semibold text-[#101010]"
               >Workshops and Training Sessions</span
             >
-            <br>
-            SaranaTech organizes hands-on workshops and training sessions
-            conducted by experienced industry professionals. These sessions
-            cover various topics, including programming languages, software
-            development methodologies, and emerging technologies.
+            <br />
+            SaranaTech organizes hands-on workshops and training sessions conducted
+            by experienced industry professionals. These sessions cover various topics,
+            including programming languages, software development methodologies, and
+            emerging technologies.
           </li>
           <li>
             <span class="font-semibold text-[#101010]">Bootcamp Program</span>
-            <br>
-            #1000Dev provides participants with access to a network of mentors
-            who offer guidance, support, and industry insights. Mentors play a
-            crucial role in nurturing talent and providing personalized advice
-            to help young developers overcome challenges and reach their full
-            potential.
+            <br />
+            #1000Dev provides participants with access to a network of mentors who
+            offer guidance, support, and industry insights. Mentors play a crucial
+            role in nurturing talent and providing personalized advice to help young
+            developers overcome challenges and reach their full potential.
           </li>
           <li>
             <span class="font-semibold text-[#101010]">Networking Events</span>
-            <br>
-            SaranaTech organizes networking events that bring together industry
-            professionals, entrepreneurs, and developers. These events offer
-            opportunities for knowledge-sharing, collaborations, and potential
-            career advancements.
+            <br />
+            SaranaTech organizes networking events that bring together industry professionals,
+            entrepreneurs, and developers. These events offer opportunities for knowledge-sharing,
+            collaborations, and potential career advancements.
           </li>
           <li>
             <span class="font-semibold text-[#101010]"
               >Provision of work tools</span
             >
-            <br>
-            We provide work tools in the form of laptops / PCs for young talents
-            with good coding talent but limited funds to get qualified work
-            tools.
+            <br />
+            We provide work tools in the form of laptops / PCs for young talents with
+            good coding talent but limited funds to get qualified work tools.
           </li>
           <li>
             <span class="font-semibold text-[#101010]"
               >Job Placement and Internship Opportunities</span
             >
-            <br>
-            Through partnerships with local businesses and organizations,
-            #1000Dev facilitates job placements and internship opportunities for
-            talented developers, enabling them to gain real-world experience and
-            kickstart their careers.
+            <br />
+            Through partnerships with local businesses and organizations, #1000Dev
+            facilitates job placements and internship opportunities for talented developers,
+            enabling them to gain real-world experience and kickstart their careers.
           </li>
         </ol>
       </div>
 
       <!-- Secondary Banner -->
       <div
-        class="h-[380px] overflow-hidden relative w-full bg-[#343434] mt-6 md:mt-10"
+        class="relative mt-6 h-[380px] w-full overflow-hidden bg-[#343434] md:mt-10"
       >
-        <div class="absolute inset-0 pointer-events-none">
+        <div class="pointer-events-none absolute inset-0">
           <Image
             src={bannerBottom}
             alt="1000Dev Secondary Banner"
@@ -207,21 +205,21 @@ import Layout from '~/layouts/Layout.astro';
         </div>
 
         <div
-          class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 gap-8"
+          class="absolute inset-0 z-10 flex flex-col items-center justify-center gap-8 p-6 text-center"
         >
           <h3
-            class="font-semibold text-[24px] md:text-[32px] leading-[36px] md:leading-[44px] text-white tracking-[1px] capitalize"
+            class="text-[24px] leading-[36px] font-semibold tracking-[1px] text-white capitalize md:text-[32px] md:leading-[44px]"
           >
             Helping Bali's best talented young people<br
               class="hidden md:block"
-            >
+            />
             to become World-class developers
           </h3>
           <div class="flex items-center">
             <Image
               src={devLogo}
               alt="Bali Movement #1000Devs"
-              class="w-[120px] md:w-[147px] object-contain"
+              class="w-[120px] object-contain md:w-[147px]"
             />
           </div>
         </div>
@@ -230,77 +228,77 @@ import Layout from '~/layouts/Layout.astro';
 
     <!-- Partners Section -->
     <section
-      class="w-full bg-white flex flex-col items-center px-4 xl:px-0 py-10 md:py-[100px] border-t border-[#E5E5E5]"
+      class="flex w-full flex-col items-center border-t border-[#E5E5E5] bg-white px-4 py-10 md:py-[100px] xl:px-0"
     >
       <div
-        class="w-full max-w-[1140px] mx-auto flex flex-col items-center gap-10 md:gap-[70px]"
+        class="mx-auto flex w-full max-w-[1140px] flex-col items-center gap-10 md:gap-[70px]"
       >
         <h2
-          class="font-bold text-[24px] md:text-[26px] leading-[28.6px] tracking-[1px] uppercase text-center text-[#101010]"
+          class="text-center text-[24px] leading-[28.6px] font-bold tracking-[1px] text-[#101010] uppercase md:text-[26px]"
         >
           OUR PARTNERS
         </h2>
 
         <!-- Grid of logos -->
-        <div class="grid grid-cols-2 md:grid-cols-3 w-full">
+        <div class="grid w-full grid-cols-2 md:grid-cols-3">
           <!-- Partner 1 -->
           <div
-            class="border-b border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+            class="flex h-[160px] items-center justify-center border-r border-b border-[#e5e5e5] p-6 md:h-[221px]"
           >
             <Image
               src={gdgBali}
               alt="GDG Bali"
-              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+              class="w-[100px] object-contain mix-blend-multiply md:w-[150px]"
             />
           </div>
           <!-- Partner 2 -->
           <div
-            class="border-b md:border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex flex-col items-center justify-center p-6 gap-4"
+            class="flex h-[160px] flex-col items-center justify-center gap-4 border-b border-[#e5e5e5] p-6 md:h-[221px] md:border-r"
           >
             <Image
               src={webfeeling}
               alt="Webfeeling"
-              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+              class="w-[100px] object-contain mix-blend-multiply md:w-[150px]"
             />
           </div>
           <!-- Partner 3 -->
           <div
-            class="border-b border-r md:border-r-0 border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+            class="flex h-[160px] items-center justify-center border-r border-b border-[#e5e5e5] p-6 md:h-[221px] md:border-r-0"
           >
             <Image
               src={uxdIsland}
               alt="UXD Island"
-              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+              class="w-[100px] object-contain mix-blend-multiply md:w-[150px]"
             />
           </div>
           <!-- Partner 4 -->
           <div
-            class="border-b md:border-b-0 md:border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+            class="flex h-[160px] items-center justify-center border-b border-[#e5e5e5] p-6 md:h-[221px] md:border-r md:border-b-0"
           >
             <Image
               src={fundamental}
               alt="Fundamental"
-              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+              class="w-[100px] object-contain mix-blend-multiply md:w-[150px]"
             />
           </div>
           <!-- Partner 5 -->
           <div
-            class="border-r md:border-r border-[#e5e5e5] h-[160px] md:h-[221px] flex items-center justify-center p-6"
+            class="flex h-[160px] items-center justify-center border-r border-[#e5e5e5] p-6 md:h-[221px] md:border-r"
           >
             <Image
               src={unbi}
               alt="UNBI"
-              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+              class="w-[100px] object-contain mix-blend-multiply md:w-[150px]"
             />
           </div>
           <!-- Partner 6 -->
           <div
-            class="h-[160px] md:h-[221px] flex items-center justify-center p-6"
+            class="flex h-[160px] items-center justify-center p-6 md:h-[221px]"
           >
             <Image
               src={primakara}
               alt="Primakara"
-              class="w-[100px] md:w-[150px] object-contain mix-blend-multiply"
+              class="w-[100px] object-contain mix-blend-multiply md:w-[150px]"
             />
           </div>
         </div>

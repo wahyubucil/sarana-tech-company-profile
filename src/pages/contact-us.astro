@@ -3,26 +3,26 @@ import Layout from '~/layouts/Layout.astro';
 ---
 
 <Layout title="Contact Us | SaranaTech" hideCta={true}>
-  <main class="w-full flex flex-col items-center">
+  <main class="flex w-full flex-col items-center">
     <section
-      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 py-10 md:py-[60px]"
+      class="mx-auto w-full max-w-[1170px] px-4 py-10 md:py-[60px] xl:px-0"
     >
       <h1
-        class="font-bold text-[32px] leading-[48px] md:text-[40px] md:leading-[60px] tracking-[1px] max-w-[570px]"
+        class="max-w-[570px] text-[32px] leading-[48px] font-bold tracking-[1px] md:text-[40px] md:leading-[60px]"
       >
         Reach Out to Us for Further Inquiries and Collaboration Opportunities
       </h1>
     </section>
 
     <section
-      class="w-full max-w-[1170px] mx-auto px-4 xl:px-0 pb-20 md:pb-[100px]"
+      class="mx-auto w-full max-w-[1170px] px-4 pb-20 md:pb-[100px] xl:px-0"
     >
       <div
-        class="flex flex-col md:flex-row gap-[40px] md:gap-[30px] items-start w-full"
+        class="flex w-full flex-col items-start gap-[40px] md:flex-row md:gap-[30px]"
       >
         <!-- Left Column -->
         <div
-          class="flex flex-col gap-[40px] flex-1 max-w-[570px] text-[#767676] text-[15px] leading-[28px]"
+          class="flex max-w-[570px] flex-1 flex-col gap-[40px] text-[15px] leading-[28px] text-[#767676]"
         >
           <p>
             We value your feedback and look forward to building productive
@@ -31,7 +31,7 @@ import Layout from '~/layouts/Layout.astro';
             goals.
           </p>
           <div>
-            <p class="font-bold mb-1">PT Sarana Digital Solusindo</p>
+            <p class="mb-1 font-bold">PT Sarana Digital Solusindo</p>
             <p class="mb-1 text-[#767676]">
               <span class="font-semibold">Office</span>
               : Perum. Raya Kampial No S11, Nusa Dua, Bali
@@ -41,7 +41,7 @@ import Layout from '~/layouts/Layout.astro';
               :
               <a
                 href="https://wa.me/6281338270676"
-                class="underline hover:text-[#101010] transition-colors"
+                class="underline transition-colors hover:text-[#101010]"
                 >+62 813-3827-0676</a
               >
             </p>
@@ -50,7 +50,7 @@ import Layout from '~/layouts/Layout.astro';
               :
               <a
                 href="mailto:info@saranatech.id"
-                class="underline hover:text-[#101010] transition-colors"
+                class="underline transition-colors hover:text-[#101010]"
                 >info@saranatech.id</a
               >
             </p>
@@ -58,49 +58,48 @@ import Layout from '~/layouts/Layout.astro';
         </div>
 
         <!-- Right Column (Form) -->
-        <div class="flex flex-col flex-1 w-full gap-[24px]">
+        <div class="flex w-full flex-1 flex-col gap-[24px]">
           <div class="flex flex-col gap-[6px]">
-            <label for="name" class="font-medium text-[14px] ">Your name</label>
+            <label for="name" class="text-[14px] font-medium">Your name</label>
             <input
               type="text"
               id="name"
               placeholder="Type your name here"
-              class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] placeholder:text-[#767676] outline-none focus:border-[#101010] transition-colors w-full"
-            >
+              class="w-full border border-[#c7c9d9] bg-white px-[16px] py-[10px] text-[14px] transition-colors outline-none placeholder:text-[#767676] focus:border-[#101010]"
+            />
           </div>
 
           <div class="flex flex-col gap-[6px]">
-            <label for="company" class="font-medium text-[14px] "
+            <label for="company" class="text-[14px] font-medium"
               >Company name</label
             >
             <input
               type="text"
               id="company"
               placeholder="Type your company name here"
-              class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] placeholder:text-[#767676] outline-none focus:border-[#101010] transition-colors w-full"
-            >
+              class="w-full border border-[#c7c9d9] bg-white px-[16px] py-[10px] text-[14px] transition-colors outline-none placeholder:text-[#767676] focus:border-[#101010]"
+            />
           </div>
 
           <div class="flex flex-col gap-[6px]">
-            <label for="email" class="font-medium text-[14px] "
-              >Your email</label
+            <label for="email" class="text-[14px] font-medium">Your email</label
             >
             <input
               type="email"
               id="email"
               placeholder="Type your email here"
-              class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] placeholder:text-[#767676] outline-none focus:border-[#101010] transition-colors w-full"
-            >
+              class="w-full border border-[#c7c9d9] bg-white px-[16px] py-[10px] text-[14px] transition-colors outline-none placeholder:text-[#767676] focus:border-[#101010]"
+            />
           </div>
 
           <div class="flex flex-col gap-[6px]">
-            <label for="topic" class="font-medium text-[14px] "
+            <label for="topic" class="text-[14px] font-medium"
               >Topic of discussion</label
             >
             <div class="relative w-full">
               <select
                 id="topic"
-                class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] outline-none focus:border-[#101010] transition-colors w-full appearance-none cursor-pointer"
+                class="w-full cursor-pointer appearance-none border border-[#c7c9d9] bg-white px-[16px] py-[10px] text-[14px] transition-colors outline-none focus:border-[#101010]"
               >
                 <option value="projects">About projects</option>
                 <option value="careers">Careers</option>
@@ -108,7 +107,7 @@ import Layout from '~/layouts/Layout.astro';
                 <option value="other">Other</option>
               </select>
               <div
-                class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none"
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4"
               >
                 <svg
                   width="12"
@@ -123,28 +122,27 @@ import Layout from '~/layouts/Layout.astro';
                     stroke="#555770"
                     stroke-width="1.5"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                    stroke-linejoin="round"></path>
                 </svg>
               </div>
             </div>
           </div>
 
           <div class="flex flex-col gap-[6px]">
-            <label for="message" class="font-medium text-[14px] "
+            <label for="message" class="text-[14px] font-medium"
               >Your message</label
             >
             <textarea
               id="message"
               placeholder="Type your message here"
               rows="4"
-              class="bg-white border border-[#c7c9d9] px-[16px] py-[10px] text-[14px] placeholder:text-[#767676] outline-none focus:border-[#101010] transition-colors w-full resize-y min-h-[108px]"
+              class="min-h-[108px] w-full resize-y border border-[#c7c9d9] bg-white px-[16px] py-[10px] text-[14px] transition-colors outline-none placeholder:text-[#767676] focus:border-[#101010]"
             ></textarea>
           </div>
 
           <button
             type="button"
-            class="bg-[#15c912] text-white font-bold text-[12px] tracking-[1px] uppercase py-[14px] px-[30px] w-full hover:bg-[#12b310] transition-colors duration-300 mt-2"
+            class="mt-2 w-full bg-[#15c912] px-[30px] py-[14px] text-[12px] font-bold tracking-[1px] text-white uppercase transition-colors duration-300 hover:bg-[#12b310]"
           >
             SEND MESSAGE
           </button>

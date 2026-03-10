@@ -1,49 +1,48 @@
 ---
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
+
 import { Logo } from './logo.tsx';
 ---
 
 <footer
-  class="bg-[#252525] content-stretch flex flex-col gap-[50px] items-center overflow-clip py-[60px] relative shrink-0 w-full"
+  class="relative flex w-full shrink-0 flex-col content-stretch items-center gap-[50px] overflow-clip bg-[#252525] py-[60px]"
 >
   <div
-    class="content-stretch flex flex-col md:flex-row gap-[40px] md:gap-[150px] items-start w-full max-w-[1170px] px-6 xl:px-0"
+    class="flex w-full max-w-[1170px] flex-col content-stretch items-start gap-[40px] px-6 md:flex-row md:gap-[150px] xl:px-0"
   >
-    <div class="flex flex-col gap-6 w-full md:w-auto">
+    <div class="flex w-full flex-col gap-6 md:w-auto">
       <div class="h-[34px] w-[127px]"><Logo variant="light" /></div>
-      <div class="font-normal leading-[24px] text-[#d8d8d8] text-[13px]">
+      <div class="text-[13px] leading-[24px] font-normal text-[#d8d8d8]">
         <p>SaranaTech (PT Sarana Digital Solusindo),</p>
         <p>{`We help realize the best potential of your `}</p>
         <p>{`business with coding & art from the land of Bali.`}</p>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row gap-[40px] md:gap-[150px] flex-wrap">
-      <div class="flex flex-col gap-6 order-3 md:order-1">
-        <p class="font-bold text-[16px] text-white uppercase">SITEMAP</p>
+    <div class="flex flex-col flex-wrap gap-[40px] md:flex-row md:gap-[150px]">
+      <div class="order-3 flex flex-col gap-6 md:order-1">
+        <p class="text-[16px] font-bold text-white uppercase">SITEMAP</p>
         <div
-          class="font-normal leading-[32px] text-[#d8d8d8] text-[13px] flex flex-col"
+          class="flex flex-col text-[13px] leading-[32px] font-normal text-[#d8d8d8]"
         >
           <a
             href="/case-study"
-            class="font-semibold hover:text-white transition-colors"
+            class="font-semibold transition-colors hover:text-white"
             >Case Study</a
           >
           <a
             href="/about"
-            class="font-semibold hover:text-white transition-colors"
-            >About Us</a
+            class="font-semibold transition-colors hover:text-white">About Us</a
           >
           <a
             href="/contact-us"
-            class="font-bold hover:text-white transition-colors"
-            >Contact Us</a
+            class="font-bold transition-colors hover:text-white">Contact Us</a
           >
         </div>
       </div>
-      <div class="flex flex-col gap-6 order-2">
-        <p class="font-bold text-[16px] text-white uppercase">Contact Us</p>
+      <div class="order-2 flex flex-col gap-6">
+        <p class="text-[16px] font-bold text-white uppercase">Contact Us</p>
         <div
-          class="font-normal leading-[24px] text-[#d8d8d8] text-[13px] flex flex-col gap-2"
+          class="flex flex-col gap-2 text-[13px] leading-[24px] font-normal text-[#d8d8d8]"
         >
           <p class="font-bold">PT Sarana Digital Solusindo</p>
           <p>
@@ -57,8 +56,7 @@ import { Logo } from './logo.tsx';
               href="https://wa.me/6281338270676"
               target="_blank"
               rel="noopener noreferrer"
-              class="underline hover:text-white"
-              >+62 813-3827-0676</a
+              class="underline hover:text-white">+62 813-3827-0676</a
             >
           </p>
           <p>
@@ -66,8 +64,7 @@ import { Logo } from './logo.tsx';
             :
             <a
               href="mailto:info@saranatech.id"
-              class="underline hover:text-white"
-              >info@saranatech.id</a
+              class="underline hover:text-white">info@saranatech.id</a
             >
           </p>
         </div>
@@ -75,31 +72,28 @@ import { Logo } from './logo.tsx';
     </div>
   </div>
 
-  <div class="w-full h-px bg-[#444]" />
+  <div class="h-px w-full bg-[#444]"></div>
 
   <div
-    class="flex flex-col md:flex-row justify-between items-center w-full gap-4 max-w-[1170px] px-6 xl:px-0"
+    class="flex w-full max-w-[1170px] flex-col items-center justify-between gap-4 px-6 md:flex-row xl:px-0"
   >
-    <p class="font-normal text-[#d8d8d8] text-[13px] text-center md:text-left">
-      © {new Date().getFullYear()} PT Sarana Digital Solusindo - All Rights
-      Reserved.
+    <p class="text-center text-[13px] font-normal text-[#d8d8d8] md:text-left">
+      © {new Date().getFullYear()} PT Sarana Digital Solusindo - All Rights Reserved.
     </p>
     <div class="flex gap-4">
       <a
         href="https://www.instagram.com/saranatech.id"
         target="_blank"
         rel="noopener noreferrer"
-        class="opacity-70 hover:opacity-100 transition-opacity text-white"
-        aria-label="Instagram"
-        ><FaInstagram size={17} /></a
+        class="text-white opacity-70 transition-opacity hover:opacity-100"
+        aria-label="Instagram"><FaInstagram size={17} /></a
       >
       <a
         href="https://www.linkedin.com/company/sarana-tech/"
         target="_blank"
         rel="noopener noreferrer"
-        class="opacity-70 hover:opacity-100 transition-opacity text-white"
-        aria-label="LinkedIn"
-        ><FaLinkedinIn size={17} /></a
+        class="text-white opacity-70 transition-opacity hover:opacity-100"
+        aria-label="LinkedIn"><FaLinkedinIn size={17} /></a
       >
     </div>
   </div>

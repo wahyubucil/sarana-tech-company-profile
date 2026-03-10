@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-primary: #7c3aed;
@@ -10,21 +10,32 @@
   --animate-bounce-slow: bounce-slow 3s infinite;
 
   @keyframes fade-in-up {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes bounce-slow {
-    0%, 100% { transform: translateY(-5%); }
-    50% { transform: translateY(5%); }
+    0%,
+    100% {
+      transform: translateY(-5%);
+    }
+    50% {
+      transform: translateY(5%);
+    }
   }
 }
 
 @layer base {
   body {
-    @apply font-sans antialiased text-[#101010] bg-white;
+    @apply bg-white font-sans text-[#101010] antialiased;
   }
-  
+
   button {
     @apply cursor-pointer;
   }

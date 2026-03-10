@@ -1,37 +1,41 @@
 ---
 import { Image } from 'astro:assets';
+
 import imgBarong from '~/assets/images/barong.svg';
 ---
 
 <div
-  class="flex justify-center overflow-clip relative py-[78px] w-full bg-black"
-  style={{ backgroundImage: "linear-gradient(264.72deg, rgb(22, 22, 22) 35.479%, rgb(3, 3, 3) 73.631%)" }}
+  class="relative flex w-full justify-center overflow-clip bg-black py-[78px]"
+  style={{
+    backgroundImage:
+      'linear-gradient(264.72deg, rgb(22, 22, 22) 35.479%, rgb(3, 3, 3) 73.631%)',
+  }}
 >
   <div
-    class="absolute h-[454px] w-[790px] left-0 top-[-72px] mix-blend-luminosity opacity-30 overflow-hidden pointer-events-none sm:left-auto sm:-right-1/2 md:right-[-160px] lg:right-[-130px] lg:top-[-100px]"
+    class="pointer-events-none absolute top-[-72px] left-0 h-[454px] w-[790px] overflow-hidden opacity-30 mix-blend-luminosity sm:-right-1/2 sm:left-auto md:right-[-160px] lg:top-[-100px] lg:right-[-130px]"
   >
     <Image
       alt=""
-      class="w-full h-full object-cover mix-blend-color-dodge"
+      class="h-full w-full object-cover mix-blend-color-dodge"
       src={imgBarong}
       loading="lazy"
     />
   </div>
 
   <div
-    class="flex flex-col gap-[50px] items-start relative z-10 px-6 max-w-[1170px] w-full"
+    class="relative z-10 flex w-full max-w-[1170px] flex-col items-start gap-[50px] px-6"
   >
     <p
-      class="font-bold leading-[1.56] md:leading-[normal] text-[32px] md:text-[24px] text-white tracking-[1px] uppercase md:w-[635px]"
+      class="text-[32px] leading-[1.56] font-bold tracking-[1px] text-white uppercase md:w-[635px] md:text-[24px] md:leading-[normal]"
     >
       unlock the full potential of your business through DIGITAL
     </p>
     <a
       href="/contact-us"
-      class="border border-solid border-white content-stretch flex items-start px-[30px] py-[14px] relative shrink-0 text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
+      class="relative flex shrink-0 content-stretch items-start border border-solid border-white px-[30px] py-[14px] text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black"
     >
       <div
-        class="flex flex-col font-normal justify-center leading-none relative shrink-0 text-[12px] text-center tracking-[1px] uppercase whitespace-nowrap"
+        class="relative flex shrink-0 flex-col justify-center text-center text-[12px] leading-none font-normal tracking-[1px] whitespace-nowrap uppercase"
       >
         <p class="leading-[17.143px] md:leading-[17px]">GET IN TOUCH</p>
       </div>

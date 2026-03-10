@@ -1,10 +1,12 @@
 ---
-import { getImage, Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import heroImg from '~/assets/images/case-study/hero.jpg';
+import { getImage, Image } from 'astro:assets';
+
 import { CaseStudyList } from '~/components/case-study/case-study-list';
 import { caseStudiesData } from '~/data/case-studies';
 import Layout from '~/layouts/Layout.astro';
+
+import heroImg from '~/assets/images/case-study/hero.jpg';
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/images/case-study/*.{jpeg,jpg,png,gif}',
@@ -44,17 +46,17 @@ const processedCaseStudies = await Promise.all(
 >
   <!-- Hero Section -->
   <section
-    class="relative h-[380px] w-full overflow-hidden flex flex-col justify-center items-center"
+    class="relative flex h-[380px] w-full flex-col items-center justify-center overflow-hidden"
   >
     <Image
       src={heroImg}
       alt="Hero Case Study"
-      class="absolute inset-0 w-full h-full object-cover z-0"
+      class="absolute inset-0 z-0 h-full w-full object-cover"
     />
-    <div class="absolute inset-0 bg-[#343434]/20 z-10"></div>
+    <div class="absolute inset-0 z-10 bg-[#343434]/20"></div>
     <div class="relative z-20 text-center">
       <h1
-        class="text-white text-[40px] md:text-5xl font-semibold tracking-[6px] uppercase leading-tight"
+        class="text-[40px] leading-tight font-semibold tracking-[6px] text-white uppercase md:text-5xl"
       >
         CASE STUDY
       </h1>
@@ -62,8 +64,8 @@ const processedCaseStudies = await Promise.all(
   </section>
 
   <!-- Case Studies Section -->
-  <section class="py-20 md:py-[100px] px-6">
-    <div class="container mx-auto max-w-[1170px] w-full">
+  <section class="px-6 py-20 md:py-[100px]">
+    <div class="container mx-auto w-full max-w-[1170px]">
       <CaseStudyList caseStudies={processedCaseStudies} client:load />
     </div>
   </section>

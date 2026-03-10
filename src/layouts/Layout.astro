@@ -2,6 +2,7 @@
 import Cta from '~/components/layout/cta.astro';
 import Footer from '~/components/layout/footer.astro';
 import Header from '~/components/layout/header.astro';
+
 import '~/styles/global.css';
 
 interface Props {
@@ -20,24 +21,24 @@ const {
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="generator" content={Astro.generator}>
-    <meta name="description" content={description}>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
 
     <!-- Google Fonts: Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
-    >
+    />
 
     <title>{title}</title>
   </head>
   <body
-    class="bg-white text-[#101010] flex flex-col min-h-screen font-['Plus_Jakarta_Sans',sans-serif]"
+    class="flex min-h-screen flex-col bg-white font-['Plus_Jakarta_Sans',sans-serif] text-[#101010]"
   >
     <Header />
     <slot />

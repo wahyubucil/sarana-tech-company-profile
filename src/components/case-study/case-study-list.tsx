@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { cn } from '~/lib/utils';
 
 interface CaseStudyItem {
@@ -28,17 +29,17 @@ export const CaseStudyList = ({ caseStudies }: CaseStudyListProps) => {
     <div className="flex w-full flex-col items-center gap-[70px]">
       {/* Title & Filters */}
       <div className="flex w-full max-w-[855px] flex-col items-center gap-[20px]">
-        <h2 className="text-center font-bold text-[#101010] text-[26px] uppercase leading-[29px] tracking-[1px]">
+        <h2 className="text-center text-[26px] leading-[29px] font-bold tracking-[1px] text-[#101010] uppercase">
           SARANA CASE STUDY
         </h2>
-        <p className="text-center font-normal text-[#767676] text-[15px] leading-[28px]">
+        <p className="text-center text-[15px] leading-[28px] font-normal text-[#767676]">
           Discover our compelling case study on software development, showcasing
           our expertise in delivering innovative solutions, challenges faced,
           and successful outcomes.
         </p>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-6 pt-3 font-normal text-[15px]">
+        <div className="flex flex-wrap justify-center gap-6 pt-3 text-[15px] font-normal">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -72,14 +73,14 @@ export const CaseStudyList = ({ caseStudies }: CaseStudyListProps) => {
               />
             </div>
             <div className="mb-[14px] rounded-[20px] bg-[#F1F1F1] px-[20px] py-[10px] transition-colors duration-300 group-hover:bg-gray-200">
-              <span className="flex items-center justify-center font-semibold text-[#101010] text-[10px] uppercase leading-[18px] tracking-[1px]">
+              <span className="flex items-center justify-center text-[10px] leading-[18px] font-semibold tracking-[1px] text-[#101010] uppercase">
                 {study.category}
               </span>
             </div>
-            <h3 className="mb-[14px] font-semibold text-[#101010] text-[16px] uppercase leading-[18px] tracking-[1px] transition-colors duration-300 group-hover:text-[#12A60F]">
+            <h3 className="mb-[14px] text-[16px] leading-[18px] font-semibold tracking-[1px] text-[#101010] uppercase transition-colors duration-300 group-hover:text-[#12A60F]">
               {study.title}
             </h3>
-            <p className="line-clamp-3 w-full font-normal text-[#767676] text-[13px] leading-[28px]">
+            <p className="line-clamp-3 w-full text-[13px] leading-[28px] font-normal text-[#767676]">
               {study.description}
             </p>
           </a>

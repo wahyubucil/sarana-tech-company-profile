@@ -1,7 +1,8 @@
 ---
-import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import { type CaseStudyData, caseStudiesData } from '~/data/case-studies';
+import { Image } from 'astro:assets';
+
+import { caseStudiesData, type CaseStudyData } from '~/data/case-studies';
 import Layout from '~/layouts/Layout.astro';
 
 export function getStaticPaths() {
@@ -35,44 +36,44 @@ if (!images[heroImagePath])
   description={`Discover our work for ${study.client}: ${study.jobdesc}`}
 >
   <!-- Main Content Wrapper -->
-  <main class="w-full flex flex-col items-center pb-20 md:pb-[100px]">
+  <main class="flex w-full flex-col items-center pb-20 md:pb-[100px]">
     <!-- Title & Meta Information Section -->
     <section
-      class="w-full max-w-[1170px] mx-auto px-6 pt-[60px] pb-[60px] flex flex-col gap-[50px]"
+      class="mx-auto flex w-full max-w-[1170px] flex-col gap-[50px] px-6 pt-[60px] pb-[60px]"
     >
       <h1
-        class="text-[#101010] text-[32px] md:text-[40px] font-bold leading-tight max-w-[640px]"
+        class="max-w-[640px] text-[32px] leading-tight font-bold text-[#101010] md:text-[40px]"
       >
         {study.title}
       </h1>
 
-      <div class="flex flex-col md:flex-row gap-8 md:gap-10">
+      <div class="flex flex-col gap-8 md:flex-row md:gap-10">
         <!-- Client -->
-        <div class="flex flex-col w-full md:w-[134px]">
-          <span class="text-[#101010] text-[15px] font-normal leading-[28px]"
+        <div class="flex w-full flex-col md:w-[134px]">
+          <span class="text-[15px] leading-[28px] font-normal text-[#101010]"
             >Client:</span
           >
-          <span class="font-normal text-[#767676] text-[15px] leading-[28px]"
+          <span class="text-[15px] leading-[28px] font-normal text-[#767676]"
             >{study.client}</span
           >
         </div>
 
         <!-- Jobdesc -->
-        <div class="flex flex-col w-full md:max-w-[371px]">
-          <span class="text-[#101010] text-[15px] font-normal leading-[28px]"
+        <div class="flex w-full flex-col md:max-w-[371px]">
+          <span class="text-[15px] leading-[28px] font-normal text-[#101010]"
             >Jobdesc:</span
           >
-          <span class="font-normal text-[#767676] text-[15px] leading-[28px]"
+          <span class="text-[15px] leading-[28px] font-normal text-[#767676]"
             >{study.jobdesc}</span
           >
         </div>
 
         <!-- Year -->
-        <div class="flex flex-col w-full md:w-[62px]">
-          <span class="text-[#101010] text-[15px] font-normal leading-[28px]"
+        <div class="flex w-full flex-col md:w-[62px]">
+          <span class="text-[15px] leading-[28px] font-normal text-[#101010]"
             >Year:</span
           >
-          <span class="font-normal text-[#767676] text-[15px] leading-[28px]"
+          <span class="text-[15px] leading-[28px] font-normal text-[#767676]"
             >{study.year}</span
           >
         </div>
@@ -80,9 +81,9 @@ if (!images[heroImagePath])
     </section>
 
     <!-- Hero Image -->
-    <section class="w-full max-w-[1170px] mx-auto px-6 mb-[100px]">
+    <section class="mx-auto mb-[100px] w-full max-w-[1170px] px-6">
       <div
-        class="w-full aspect-1170/380 bg-[#E7E7E7] rounded-lg overflow-hidden relative"
+        class="relative aspect-1170/380 w-full overflow-hidden rounded-lg bg-[#E7E7E7]"
       >
         <Image
           src={images[heroImagePath]()}
@@ -94,124 +95,159 @@ if (!images[heroImagePath])
 
     <!-- Content Sections -->
     <section
-      class="w-full max-w-[1170px] mx-auto px-6 flex flex-col items-center"
+      class="mx-auto flex w-full max-w-[1170px] flex-col items-center px-6"
     >
-      <div class="w-full flex flex-col gap-[50px]">
+      <div class="flex w-full flex-col gap-[50px]">
         <!-- About -->
-        <div class="w-full max-w-[640px] flex flex-col gap-5">
-          <h2 class="text-[#101010] text-[20px] font-bold leading-[29px]">
+        <div class="flex w-full max-w-[640px] flex-col gap-5">
+          <h2 class="text-[20px] leading-[29px] font-bold text-[#101010]">
             {study.aboutTitle}
           </h2>
           <div class="flex flex-col gap-4">
-            {formatParagraphs(study.aboutDesc).map((p) => (
-              // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-              <p class="font-normal text-[#767676] text-[15px] leading-[28px]">{p}</p>
-            ))}
+            {
+              formatParagraphs(study.aboutDesc).map((p) => (
+                // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+                <p class="text-[15px] leading-[28px] font-normal text-[#767676]">
+                  {p}
+                </p>
+              ))
+            }
           </div>
         </div>
 
         <!-- Challenges -->
-        <div class="w-full max-w-[640px] flex flex-col gap-5">
-          <h2 class="text-[#101010] text-[20px] font-bold leading-[29px]">
+        <div class="flex w-full max-w-[640px] flex-col gap-5">
+          <h2 class="text-[20px] leading-[29px] font-bold text-[#101010]">
             Challenges:
           </h2>
-          <ul class="list-disc pl-5 flex flex-col gap-2">
-            {formatParagraphs(study.challenges).map((p) => (
-              // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-              <li class="font-normal text-[#767676] text-[15px] leading-[28px]">{p}</li>
-            ))}
+          <ul class="flex list-disc flex-col gap-2 pl-5">
+            {
+              formatParagraphs(study.challenges).map((p) => (
+                // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+                <li class="text-[15px] leading-[28px] font-normal text-[#767676]">
+                  {p}
+                </li>
+              ))
+            }
           </ul>
         </div>
 
         <!-- Solutions -->
-        <div class="w-full max-w-[640px] flex flex-col gap-5">
-          <h2 class="text-[#101010] text-[20px] font-bold leading-[29px]">
+        <div class="flex w-full max-w-[640px] flex-col gap-5">
+          <h2 class="text-[20px] leading-[29px] font-bold text-[#101010]">
             Solutions:
           </h2>
-          <ul class="list-disc pl-5 flex flex-col gap-2">
-            {formatParagraphs(study.solutions).map((p) => (
-              // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-              <li class="font-normal text-[#767676] text-[15px] leading-[28px]">{p}</li>
-            ))}
+          <ul class="flex list-disc flex-col gap-2 pl-5">
+            {
+              formatParagraphs(study.solutions).map((p) => (
+                // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+                <li class="text-[15px] leading-[28px] font-normal text-[#767676]">
+                  {p}
+                </li>
+              ))
+            }
           </ul>
         </div>
 
         <!-- Tech Stack -->
-        <div class="w-full max-w-[640px] flex flex-col gap-5">
-          <h2 class="text-[#101010] text-[20px] font-bold leading-[29px]">
+        <div class="flex w-full max-w-[640px] flex-col gap-5">
+          <h2 class="text-[20px] leading-[29px] font-bold text-[#101010]">
             Tech stack:
           </h2>
           <div class="flex flex-col gap-2">
-            {formatParagraphs(study.techStack).map((p) => (
-              // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-              <p class="font-normal text-[#767676] text-[15px] leading-[28px]">{p}</p>
-            ))}
+            {
+              formatParagraphs(study.techStack).map((p) => (
+                // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+                <p class="text-[15px] leading-[28px] font-normal text-[#767676]">
+                  {p}
+                </p>
+              ))
+            }
           </div>
         </div>
 
         <!-- Summary -->
-        <div class="w-full max-w-[640px] flex flex-col gap-5">
-          <h2 class="text-[#101010] text-[20px] font-bold leading-[29px]">
+        <div class="flex w-full max-w-[640px] flex-col gap-5">
+          <h2 class="text-[20px] leading-[29px] font-bold text-[#101010]">
             Summary:
           </h2>
           <div class="flex flex-col gap-4">
-            {formatParagraphs(study.summary).map((p) => (
-              // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-              <p class="font-normal text-[#767676] text-[15px] leading-[28px]">{p}</p>
-            ))}
+            {
+              formatParagraphs(study.summary).map((p) => (
+                // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+                <p class="text-[15px] leading-[28px] font-normal text-[#767676]">
+                  {p}
+                </p>
+              ))
+            }
           </div>
         </div>
 
         <!-- Content Images -->
-        {study.contentImages.map((img) => {
-          const contentImagePath = `/src/assets/images/case-study/${img}`;
-          if (!images[contentImagePath]) throw new Error(`"${contentImagePath}" does not exist in glob`);
-          return (
-            // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-            <div class="flex aspect-1170/630 w-full items-center justify-center overflow-hidden rounded-lg bg-[#E7E7E7]">
-               <Image
-                src={images[contentImagePath]()}
-                alt={`Showcase of ${study.title}`}
-                class="h-full w-full object-cover"
-              />
-            </div>
-          );
-        })}
+        {
+          study.contentImages.map((img) => {
+            const contentImagePath = `/src/assets/images/case-study/${img}`;
+            if (!images[contentImagePath])
+              throw new Error(`"${contentImagePath}" does not exist in glob`);
+            return (
+              // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+              <div class="flex aspect-1170/630 w-full items-center justify-center overflow-hidden rounded-lg bg-[#E7E7E7]">
+                <Image
+                  src={images[contentImagePath]()}
+                  alt={`Showcase of ${study.title}`}
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            );
+          })
+        }
       </div>
     </section>
 
     <!-- Other Case Study -->
     <section
-      class="w-full max-w-[1170px] mx-auto px-6 mt-[100px] flex flex-col gap-[70px]"
+      class="mx-auto mt-[100px] flex w-full max-w-[1170px] flex-col gap-[70px] px-6"
     >
-      <h2 class="text-[#101010] text-[40px] font-bold leading-tight">
+      <h2 class="text-[40px] leading-tight font-bold text-[#101010]">
         Other Case Study
       </h2>
-      <div class="w-full overflow-x-auto pb-4 hide-scrollbar">
-        <div class="flex gap-[50px] min-w-max">
-          {caseStudiesData.filter(s => s.id !== study.id).map(other => {
-            const otherImagePath = `/src/assets/images/case-study/${other.heroImage}`;
-            if (!images[otherImagePath]) throw new Error(`"${otherImagePath}" does not exist in glob`);
-            return (
-              // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-              <a href={`/case-studies/${other.id}`} class="group flex w-[360px] cursor-pointer flex-col gap-4">
-                <div class="relative aspect-360/250 w-full overflow-hidden rounded-lg bg-[#F1F1F1]">
-                  <Image
-                    src={images[otherImagePath]()}
-                    alt={other.title}
-                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div class="w-fit rounded-full bg-[#F1F1F1] px-5 py-2.5 transition-colors duration-300 group-hover:bg-gray-200">
-                  <span class="font-bold text-[#101010] text-[10px] uppercase tracking-[1px]">Website</span>
-                </div>
-                <h3 class="font-bold text-[#101010] text-[16px] uppercase tracking-[1px] transition-colors duration-300 group-hover:text-[#12A60F]">{other.client}</h3>
-                <p class="line-clamp-3 font-normal text-[#767676] text-[13px] leading-[28px]">
-                  {other.aboutDesc.substring(0, 150)}...
-                </p>
-              </a>
-            );
-          })}
+      <div class="hide-scrollbar w-full overflow-x-auto pb-4">
+        <div class="flex min-w-max gap-[50px]">
+          {
+            caseStudiesData
+              .filter((s) => s.id !== study.id)
+              .map((other) => {
+                const otherImagePath = `/src/assets/images/case-study/${other.heroImage}`;
+                if (!images[otherImagePath])
+                  throw new Error(`"${otherImagePath}" does not exist in glob`);
+                return (
+                  // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+                  <a
+                    href={`/case-studies/${other.id}`}
+                    class="group flex w-[360px] cursor-pointer flex-col gap-4"
+                  >
+                    <div class="relative aspect-360/250 w-full overflow-hidden rounded-lg bg-[#F1F1F1]">
+                      <Image
+                        src={images[otherImagePath]()}
+                        alt={other.title}
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div class="w-fit rounded-full bg-[#F1F1F1] px-5 py-2.5 transition-colors duration-300 group-hover:bg-gray-200">
+                      <span class="text-[10px] font-bold tracking-[1px] text-[#101010] uppercase">
+                        Website
+                      </span>
+                    </div>
+                    <h3 class="text-[16px] font-bold tracking-[1px] text-[#101010] uppercase transition-colors duration-300 group-hover:text-[#12A60F]">
+                      {other.client}
+                    </h3>
+                    <p class="line-clamp-3 text-[13px] leading-[28px] font-normal text-[#767676]">
+                      {other.aboutDesc.substring(0, 150)}...
+                    </p>
+                  </a>
+                );
+              })
+          }
         </div>
       </div>
     </section>
@@ -219,11 +255,11 @@ if (!images[heroImagePath])
 </Layout>
 
 <style>
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 </style>

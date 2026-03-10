@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+
 import { cn } from '~/lib/utils';
+
 import { Logo } from './logo';
 
 export const Navigation = () => {
@@ -85,7 +87,7 @@ export const Navigation = () => {
           </a>
         </div>
 
-        <nav className="flex flex-col items-center gap-[40px] font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[24px] text-white uppercase tracking-[2px] md:text-[32px]">
+        <nav className="flex flex-col items-center gap-[40px] font-['Plus_Jakarta_Sans',sans-serif] text-[24px] font-bold tracking-[2px] text-white uppercase md:text-[32px]">
           <a
             href="/"
             onClick={() => setIsOpen(false)}

@@ -1,19 +1,22 @@
 ---
 import { Image } from 'astro:assets';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
+
 import imgEnrique from '~/assets/images/testimonials/enrique.png';
 import imgNyoman from '~/assets/images/testimonials/nyoman.png';
 ---
 
 <div
-  class="bg-[#fbfbfb] content-stretch flex flex-col lg:flex-row gap-[30px] items-center lg:items-stretch lg:justify-center overflow-clip pb-[100px] px-4 md:px-[135px] relative shrink-0 w-full"
+  class="relative flex w-full shrink-0 flex-col content-stretch items-center gap-[30px] overflow-clip bg-[#fbfbfb] px-4 pb-[100px] md:px-[135px] lg:flex-row lg:items-stretch lg:justify-center"
 >
   <div
-    class="border border-[#e5e5e5] bg-white content-stretch flex flex-col gap-[40px] items-start px-[25px] py-[40px] relative shrink-0 w-full lg:w-1/2 max-w-[831px] lg:max-w-[550px]"
+    class="relative flex w-full max-w-[831px] shrink-0 flex-col content-stretch items-start gap-[40px] border border-[#e5e5e5] bg-white px-[25px] py-[40px] lg:w-1/2 lg:max-w-[550px]"
   >
-    <div class="font-normal leading-[1.6] text-[16px] tracking-[0.11px]">
+    <div class="text-[16px] leading-[1.6] font-normal tracking-[0.11px]">
       <p class="mb-4">
-        {`“Working with SaranaTech and their team has been a pleasure. They are highly skilled and knowledgeable in development and understand our needs and objectives.`}
+        {
+          `“Working with SaranaTech and their team has been a pleasure. They are highly skilled and knowledgeable in development and understand our needs and objectives.`
+        }
       </p>
       <p>
         Their attention to detail and meticulous approach to coding ensures that
@@ -21,18 +24,18 @@ import imgNyoman from '~/assets/images/testimonials/nyoman.png';
         designs, and optimized for optimal performance.”
       </p>
     </div>
-    <div class="flex items-center gap-[20px] w-full">
-      <div class="relative rounded-[10px] shrink-0 size-[50px] overflow-hidden">
+    <div class="flex w-full items-center gap-[20px]">
+      <div class="relative size-[50px] shrink-0 overflow-hidden rounded-[10px]">
         <Image
           alt="Enrique Medina"
-          class="absolute inset-0 max-w-none object-cover size-full"
+          class="absolute inset-0 size-full max-w-none object-cover"
           src={imgEnrique}
           loading="lazy"
         />
       </div>
-      <div class="flex flex-col gap-[5px] flex-1">
-        <p class="font-bold text-[17px] tracking-[0.23px]">Enrique Medina</p>
-        <p class="font-normal text-[#767676] text-[15px] tracking-[0.15px]">
+      <div class="flex flex-1 flex-col gap-[5px]">
+        <p class="text-[17px] font-bold tracking-[0.23px]">Enrique Medina</p>
+        <p class="text-[15px] font-normal tracking-[0.15px] text-[#767676]">
           Project Manager Webfeeling
         </p>
       </div>
@@ -40,11 +43,13 @@ import imgNyoman from '~/assets/images/testimonials/nyoman.png';
     </div>
   </div>
   <div
-    class="border border-[#e5e5e5] bg-white content-stretch flex flex-col gap-[40px] items-start px-[25px] py-[40px] relative shrink-0 w-full lg:w-1/2 max-w-[831px] lg:max-w-[550px]"
+    class="relative flex w-full max-w-[831px] shrink-0 flex-col content-stretch items-start gap-[40px] border border-[#e5e5e5] bg-white px-[25px] py-[40px] lg:w-1/2 lg:max-w-[550px]"
   >
-    <div class="font-normal leading-[1.6] text-[16px] tracking-[0.11px]">
+    <div class="text-[16px] leading-[1.6] font-normal tracking-[0.11px]">
       <p class="mb-4">
-        {`“I am incredibly impressed with the website development service provided by SaranaTech. They exceeded my expectations in every aspect of the project.`}
+        {
+          `“I am incredibly impressed with the website development service provided by SaranaTech. They exceeded my expectations in every aspect of the project.`
+        }
       </p>
       <p>
         From the initial consultation to the final delivery, their team
@@ -52,18 +57,18 @@ import imgNyoman from '~/assets/images/testimonials/nyoman.png';
         understanding of our business needs.”
       </p>
     </div>
-    <div class="flex items-center gap-[20px] w-full">
-      <div class="relative rounded-[10px] shrink-0 size-[50px] overflow-hidden">
+    <div class="flex w-full items-center gap-[20px]">
+      <div class="relative size-[50px] shrink-0 overflow-hidden rounded-[10px]">
         <Image
           alt="I Nyoman Sudiarta"
-          class="absolute h-full object-cover size-full"
+          class="absolute size-full h-full object-cover"
           src={imgNyoman}
           loading="lazy"
         />
       </div>
-      <div class="flex flex-col gap-[5px] flex-1">
-        <p class="font-bold text-[17px] tracking-[0.23px]">I Nyoman Sudiarta</p>
-        <p class="font-normal text-[#767676] text-[15px] tracking-[0.15px]">
+      <div class="flex flex-1 flex-col gap-[5px]">
+        <p class="text-[17px] font-bold tracking-[0.23px]">I Nyoman Sudiarta</p>
+        <p class="text-[15px] font-normal tracking-[0.15px] text-[#767676]">
           Chairman of PAWIBA
         </p>
       </div>
