@@ -13,16 +13,17 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 const processedCaseStudies = await Promise.all(
   caseStudiesData.map(async (study) => {
     const imagePath = `/src/assets/images/case-study/${study.heroImage}`;
-    let imageSrc = '';
+    if (!images[imagePath])
+      throw new Error(
+        `"${imagePath}" does not exist in glob: "src/assets/images/case-study/*.{jpeg,jpg,png,gif}"`,
+      );
 
-    if (images[imagePath]) {
-      const { default: imageMetadata } = await images[imagePath]();
-      const optimizedImage = await getImage({
-        src: imageMetadata,
-        format: 'webp',
-      });
-      imageSrc = optimizedImage.src;
-    }
+    const { default: imageMetadata } = await images[imagePath]();
+    const optimizedImage = await getImage({
+      src: imageMetadata,
+      format: 'webp',
+    });
+    const imageSrc = optimizedImage.src;
 
     return {
       id: study.id,

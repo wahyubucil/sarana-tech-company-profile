@@ -24,6 +24,10 @@ const formatParagraphs = (text: string) =>
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/images/case-study/*.{jpeg,jpg,png,gif}',
 );
+
+const heroImagePath = `/src/assets/images/case-study/${study.heroImage}`;
+if (!images[heroImagePath])
+  throw new Error(`"${heroImagePath}" does not exist in glob`);
 ---
 
 <Layout
@@ -81,7 +85,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         class="w-full aspect-1170/380 bg-[#E7E7E7] rounded-lg overflow-hidden relative"
       >
         <Image
-          src={images[`/src/assets/images/case-study/${study.heroImage}`]()}
+          src={images[heroImagePath]()}
           alt={study.title}
           class="h-full w-full object-cover"
         />
@@ -159,16 +163,20 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         </div>
 
         <!-- Content Images -->
-        {study.contentImages.map((img) => (
-          // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-          <div class="flex aspect-1170/630 w-full items-center justify-center overflow-hidden rounded-lg bg-[#E7E7E7]">
-             <Image
-              src={images[`/src/assets/images/case-study/${img}`]()}
-              alt={`Showcase of ${study.title}`}
-              class="h-full w-full object-cover"
-            />
-          </div>
-        ))}
+        {study.contentImages.map((img) => {
+          const contentImagePath = `/src/assets/images/case-study/${img}`;
+          if (!images[contentImagePath]) throw new Error(`"${contentImagePath}" does not exist in glob`);
+          return (
+            // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+            <div class="flex aspect-1170/630 w-full items-center justify-center overflow-hidden rounded-lg bg-[#E7E7E7]">
+               <Image
+                src={images[contentImagePath]()}
+                alt={`Showcase of ${study.title}`}
+                class="h-full w-full object-cover"
+              />
+            </div>
+          );
+        })}
       </div>
     </section>
 
@@ -181,25 +189,29 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       </h2>
       <div class="w-full overflow-x-auto pb-4 hide-scrollbar">
         <div class="flex gap-[50px] min-w-max">
-          {caseStudiesData.filter(s => s.id !== study.id).map(other => (
-            // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
-            <a href={`/case-studies/${other.id}`} class="group flex w-[360px] cursor-pointer flex-col gap-4">
-              <div class="relative aspect-360/250 w-full overflow-hidden rounded-lg bg-[#F1F1F1]">
-                <Image
-                  src={images[`/src/assets/images/case-study/${other.heroImage}`]()}
-                  alt={other.title}
-                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="w-fit rounded-full bg-[#F1F1F1] px-5 py-2.5 transition-colors duration-300 group-hover:bg-gray-200">
-                <span class="font-bold text-[#101010] text-[10px] uppercase tracking-[1px]">Website</span>
-              </div>
-              <h3 class="font-bold text-[#101010] text-[16px] uppercase tracking-[1px] transition-colors duration-300 group-hover:text-[#12A60F]">{other.client}</h3>
-              <p class="line-clamp-3 font-normal text-[#767676] text-[13px] leading-[28px]">
-                {other.aboutDesc.substring(0, 150)}...
-              </p>
-            </a>
-          ))}
+          {caseStudiesData.filter(s => s.id !== study.id).map(other => {
+            const otherImagePath = `/src/assets/images/case-study/${other.heroImage}`;
+            if (!images[otherImagePath]) throw new Error(`"${otherImagePath}" does not exist in glob`);
+            return (
+              // biome-ignore lint/correctness/useJsxKeyInIterable: intentional
+              <a href={`/case-studies/${other.id}`} class="group flex w-[360px] cursor-pointer flex-col gap-4">
+                <div class="relative aspect-360/250 w-full overflow-hidden rounded-lg bg-[#F1F1F1]">
+                  <Image
+                    src={images[otherImagePath]()}
+                    alt={other.title}
+                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div class="w-fit rounded-full bg-[#F1F1F1] px-5 py-2.5 transition-colors duration-300 group-hover:bg-gray-200">
+                  <span class="font-bold text-[#101010] text-[10px] uppercase tracking-[1px]">Website</span>
+                </div>
+                <h3 class="font-bold text-[#101010] text-[16px] uppercase tracking-[1px] transition-colors duration-300 group-hover:text-[#12A60F]">{other.client}</h3>
+                <p class="line-clamp-3 font-normal text-[#767676] text-[13px] leading-[28px]">
+                  {other.aboutDesc.substring(0, 150)}...
+                </p>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
