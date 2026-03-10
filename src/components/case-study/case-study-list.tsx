@@ -1,35 +1,23 @@
 import { useState } from 'react';
-import nexusImg from '~/assets/images/case-study/nexus-fms.jpg';
 import { cn } from '~/lib/utils';
 
-export const CaseStudyList = () => {
-  const caseStudies = [
-    {
-      title: 'NEXUS SCHOOL FMS',
-      category: 'Website',
-      description:
-        'Efficient student bill tracking and management. Businesses can monitor and optimize their operational budgeting smoothly & cost-effectiveness.',
-      image: nexusImg.src,
-    },
-    {
-      title: 'XARANA TRACKING',
-      category: 'Website',
-      description:
-        'Efficient tracking & management of drivers. Businesses can seamlessly monitor & optimize their fleet operations, enhancing productivity, & cost effectiveness.',
-      image: nexusImg.src,
-    },
-    {
-      title: 'XARANA APP',
-      category: 'Mobile Apps',
-      description:
-        'Efficient tracking & management of drivers. Businesses can seamlessly monitor & optimize their fleet operations, enhancing productivity, & cost effectiveness.',
-      image: nexusImg.src,
-    },
-  ];
+interface CaseStudyItem {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  link: string;
+}
 
+interface CaseStudyListProps {
+  caseStudies: CaseStudyItem[];
+}
+
+export const CaseStudyList = ({ caseStudies }: CaseStudyListProps) => {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filters = ['All', 'Website', 'Mobile Apps', 'System'];
+  const filters = ['All', 'Website', 'Mobile Apps'];
 
   const filteredStudies =
     activeFilter === 'All'
@@ -70,8 +58,9 @@ export const CaseStudyList = () => {
       {/* Cards Grid */}
       <div className="grid w-full grid-cols-1 gap-[50px] sm:justify-center md:justify-center lg:grid-cols-3">
         {filteredStudies.map((study) => (
-          <div
-            key={study.title}
+          <a
+            key={study.id}
+            href={study.link}
             className="group flex cursor-pointer flex-col items-start sm:mx-auto sm:w-[480px] md:mx-auto md:w-[480px] lg:mx-0 lg:w-full"
           >
             <div className="relative mb-[14px] aspect-360/250 w-full overflow-hidden bg-gray-100">
@@ -90,10 +79,10 @@ export const CaseStudyList = () => {
             <h3 className="mb-[14px] font-semibold text-[#101010] text-[16px] uppercase leading-[18px] tracking-[1px] transition-colors duration-300 group-hover:text-[#12A60F]">
               {study.title}
             </h3>
-            <p className="w-full font-normal text-[#767676] text-[13px] leading-[28px]">
+            <p className="line-clamp-3 w-full font-normal text-[#767676] text-[13px] leading-[28px]">
               {study.description}
             </p>
-          </div>
+          </a>
         ))}
       </div>
     </div>
